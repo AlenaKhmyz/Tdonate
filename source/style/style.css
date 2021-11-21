@@ -290,8 +290,8 @@ body {
 }
 
 .home-img {
-  height: 350px;
-  width: 45%;
+  height: 428px;
+  width: 54%;
   background: url("../../Main/img/cards/telegram.png") center no-repeat;
   background-size: 100%;
 }
@@ -319,8 +319,8 @@ body {
 
 @media (min-width: 1920px) {
   .home-img {
-    height: 350px;
-    width: 37%;
+    height: 472px;
+    width: 55%;
   }
 }
 
