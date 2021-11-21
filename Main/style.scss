@@ -51,7 +51,7 @@ body {
 .head {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
@@ -66,8 +66,20 @@ body {
   }
 }
 
+.big-desktop {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @include big-desktop {
+    align-self: center;
+    width: 1600px;
+  }
+}
+
 .logo {
- 
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -90,9 +102,15 @@ body {
   line-height: 22px;
   cursor:pointer;
   color: #1A76C8;
+
   @include mobile {
     padding: 11px 24px;
-    width: 50%;
+    width: 27%;
+  }
+
+  @include portrait-up {
+    padding: 11px 24px;
+    width: 40%;
   }
 
   @include galaxy {
@@ -130,17 +148,23 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   width: 39%;
+
+  @include desktop {
+    width: 46%;
+  }
+  
+  @include phone {
+    width: 42%;
+  }
+
   @include mobile {
     width: 100%;
   }
 
-  @include phone {
-    width: 80%;
-  }
-
-  @include desktop {
-    width: 90%;
-  }
+ @include galaxy {
+   width: 100%;
+ }
+  
 }
 
 .home-title {
@@ -181,26 +205,24 @@ body {
   color: #FFFFFF;
   width: 42%;
   cursor:pointer;
-
-  
  
-
-   @include desktop {
-    font-size: 20px;
-    width: 25%;
-  }
-
-  @include phone {
-    width: 33%;
-    margin: 3% 0 12%;
-  }
-
   @include big-desktop {
-    width: 59%;
-    padding: 13px 25px;
+    width: 42%;
+    padding: 13px 0;
     font-size: 18px;
     line-height:  22px;
   }
+
+   @include desktop {
+    font-size: 20px;
+    width: 45%;
+  }
+
+  @include phone {
+    width: 45%;
+    margin: 3% 0 12%;
+  }
+
 
   @include mobile {
     font-family: Lato;
@@ -209,7 +231,7 @@ body {
     font-size: 18px;
     line-height: 22px;
     padding: 12px 16px;
-    width: 45%;
+    width: 35%;
   }
 
    @include galaxy {
@@ -219,29 +241,31 @@ body {
 }
 
 .home-img {
-  //height: 428px;
   padding-top: 14px;
   width: 54%;
   background-size: 100%;
-  @include mobile {
-    width: 0%;
-   // height: 0%;
+
+   @include big-desktop {
+    width: 55%;
   }
 
   @include phone {
-    width: 0%;
-    height: 0%;
+    width: 49%;
   }
 
-  @include desktop {
-    width: 0%;
-    height: 0%;
-  }
-
-  @include big-desktop {
-    height: 472px;
+  @include landscape-up {
     width: 55%;
   }
+
+  @include mobile {
+    width: 0%;
+  }
+
+  @include galaxy {
+    width: 0;
+    height: 0;
+  }
+
 }
 
 .commission {
@@ -347,14 +371,10 @@ body {
 
 .date {
   display: flex;
+  text-align: center;
   flex-direction: column;
   width: 20%;
   margin: 10% 0;
-  
-
-  @include galaxy {
-    width: 55%;
-  }
 
   @include phone {
     width: 30%;
@@ -371,6 +391,11 @@ body {
   @include landscape-up {
     width: 30%;
   }
+
+   @include galaxy {
+    width: 100%;
+  }
+
 }
 
 .statistics-value {
@@ -527,6 +552,8 @@ body {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
   width: 100%;
   background: #0C3152;
 
@@ -540,6 +567,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 4% ;
+  width: 100%;
 }
 
 .container {

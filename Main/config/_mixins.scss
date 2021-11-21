@@ -13,7 +13,7 @@
 } 
 
 @mixin portrait-up {
-  @media (min-width: $portrait-up) {
+  @media (max-width: $portrait-up) {
     @content;
   } 
 } 
