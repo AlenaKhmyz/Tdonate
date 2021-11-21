@@ -219,13 +219,13 @@ body {
 }
 
 .home-img {
-  height: 428px;
+  //height: 428px;
+  padding-top: 14px;
   width: 54%;
-  background: url("../../Main/img/cards/telegram.png") center no-repeat;
   background-size: 100%;
   @include mobile {
     width: 0%;
-    height: 0%;
+   // height: 0%;
   }
 
   @include phone {
