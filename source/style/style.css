@@ -263,9 +263,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .main-small-block-btn {
@@ -755,5 +752,10 @@ ul li ul li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: rgba(0, 0, 0, 0.94);
+}
+
+canvas {
+  margin: 40px;
+  border: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */
