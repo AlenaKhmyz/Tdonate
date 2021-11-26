@@ -1,2 +1,2 @@
 # Tdonate
-https://alenakhmyz.github.io/Tdonate/Main/
+https://alenakhmyz.github.io/Tdonate/Auxiliary/
