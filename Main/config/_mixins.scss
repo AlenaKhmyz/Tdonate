@@ -24,6 +24,7 @@
   } 
 } 
 
+
 @mixin landscape-up {
   @media (max-width: $landscape) {
     @content;

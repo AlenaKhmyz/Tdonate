@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../source/style/style.css">
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-  <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+   <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+  
   <title>Tdonate</title>
 </head>
 <body>
@@ -24,38 +26,40 @@
       <div class="main-small-block">
         <button class="main-small-block-btn">Добавить канал</button>
         <div class="main-small-block-left">
-          <div class="main-small-block-left-card">
-            <img class="left-card-img" src="./img/avatars/boris.png"/>
-            <p class="left-card-name"> BORIS team. UIFUN.tv fan</p>
+          <div class="left-card" id="btn-expand">
+            <div class="small-block-left-card">
+              <img class="left-card-img" src="./img/avatars/boris.png"/>
+              <p class="left-card-name"> BORIS team. UIFUN.tv fan</p>
+            </div>
+            <img class="left-card-icon" src="./img/icons/dropdown.png">
           </div>
-          <div class="main-small-block-left-card">
+        <ul id="list">
+          <li class="main-small-block-left-card">
             <img class="left-card-img" src="./img/avatars/fashion.png"/>
             <p class="left-card-name">Всемирная мода</p>
-          </div>
-          <div class="main-small-block-left-card">
+          </li>
+          <li class="main-small-block-left-card">
             <img class="left-card-img" src="./img/avatars/winterSeason.png"/>
             <p class="left-card-name">Зимний сезон</p>
-          </div>
-          <div class="main-small-block-left-card">
+          </li>
+          <li class="main-small-block-left-card">
             <img class="left-card-img" src="./img/avatars/recipes.png"/>
             <p class="left-card-name">Китайские рецепты</p>
-          </div>
-          <div class="main-small-block-left-card">
+          </li>
+          <li class="main-small-block-left-card">
             <img class="left-card-img" src="./img/avatars/pillows.png"/>
             <p class="left-card-name">Подушки ЕКБ</p>
-          </div>
-          <div class="main-small-block-left-card">
-            <img class="left-card-img" src="./img/avatars/pillows.png"/>
-            <p class="left-card-name">Подушки ЕКБ</p>
-          </div>
-          <div class="main-small-block-left-card">
+          </li>
+          <li class="main-small-block-left-card">
             <img class="left-card-img" src="./img/avatars/tattoo.png"/>
             <p class="left-card-name">Эскизы тату</p>
-          </div>
-          <div class="main-small-block-left-card">
+          </li>
+          <li class="main-small-block-left-card">
             <img class="left-card-img" src="./img/avatars/club.png"/>
             <p class="left-card-name">Клуб Метафора</p>
-          </div>
+          </li>
+        </ul>
+          
         </div>
       </div>
 <!--main-big-block-->
@@ -85,7 +89,7 @@
           <p class="main-big-block-basic-title">Действия с каналом</p>
           <div class="main-big-block-basic-buttons">
             <button class="block-basic-buttons-btn">Опубликовать топ-донатеров на канале</button>
-            <button class="block-basic-buttons-btn">Перейти на страницу донатов</button>
+            <button class="block-basic-buttons-btn right">Перейти на страницу донатов</button>
           </div>
           <div class="main-big-block-basic-list">
             <div class="main-big-block-basic-list-containers">
@@ -126,14 +130,17 @@
           <div class="main-big-block-basic-chart">
             <div class="block-basic-chart-information">
               <p class="basic-chart-information-title">Статистика</p>
-              <div class="basic-chart-information-value">
-                <p class="basic-chart-information-value-text">Донат за день</p>
-                <p class="basic-chart-information-value-accoun">123 RUB</p>
+              <div class="basic-chart-information-container">
+                <div class="basic-chart-information-value">
+                  <p class="basic-chart-information-value-text">Донат за день</p>
+                  <p class="basic-chart-information-value-accoun">123 RUB</p>
+                </div>
+                <div class="basic-chart-information-value">
+                  <p class="basic-chart-information-value-text">Донат все время</p>
+                  <p class="basic-chart-information-value-accoun">9123 RUB</p>
+                </div>
               </div>
-              <div class="basic-chart-information-value">
-                <p class="basic-chart-information-value-text">Донат все время</p>
-                <p class="basic-chart-information-value-accoun">9123 RUB</p>
-              </div>
+              
               <div class="basic-chart-information-list">
                 <ul class="basic-chart-information-dates">
                   <li class="basic-chart-information-date">
@@ -142,7 +149,7 @@
                 </ul>
               </div>
             </div>
-            <canvas id="chart">
+            <div id="chart_div"></div>
           </div>
         </div>
       </div>
@@ -170,6 +177,26 @@
       </div>
     </div>
   </div>
+  <!-- <script src="main.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script>
+
+    onresize = function () {
+
+      if (innerWidth > 900 && $("#list").css("display") === "none") {
+        $("#list").css("display", "block");
+      }
+    }
+    
+    $('#btn-expand').click(function() {
+      if (window.innerWidth <= 900) {
+        $("#list").slideToggle(200);
+      }
+    });
+
+  </script>
+  <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
+
 </html>

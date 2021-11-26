@@ -24,6 +24,12 @@
   } 
 } 
 
+@mixin fold {
+  @media (max-width: $fold) {
+    @content;
+  } 
+} 
+
 @mixin landscape-up {
   @media (max-width: $landscape) {
     @content;

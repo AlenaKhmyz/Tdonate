@@ -12,6 +12,9 @@
   padding: 0;
 }
 
+html {
+  height: 100vh;
+}
 
 
 body {
@@ -19,7 +22,6 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Lato';
-  height: 100vh;
 }
 
 .head {
@@ -60,6 +62,11 @@ body {
   line-height: 29px;
   text-transform: uppercase;
   color: #FFFFFF;
+
+  @include fold {
+    font-size: 20px;
+    line-height: 29px;
+  }
 }
 
 .withdraw {
@@ -69,88 +76,13 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #FFFFFF;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #0C3152;
-
-  @include big-desktop {
-    width: 100%;
+  @include fold {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 
-.footer-containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 4% ;
-  width: 100%;
-}
 
-.container {
-  display: flex;
-  flex-direction: column;
-  @include mobile {
-
-    width: 30%;
-  }
-}
-
-.filling {
-  padding: 2% 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  cursor:pointer;
-  color: #FFFFFF;
-  @include mobile {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.container-icon {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  box-sizing: content-box;
-  border: none;
-  border-radius: 50px;
-  background: #1A76C8;
-  @include mobile {
-    height: 25px;
-    width: 25px;
-    border-radius: 25px;
-  }
-}
-
-.icons-logo {
-  @include mobile {
-    width: 13px;
-    height: 12px;
-  }
-
-
-}
 
 .wrap {
   width: 100%;
@@ -159,6 +91,10 @@ body {
   @include big-desktop {
     align-self: center;
     width: 1600px;
+    padding: 3% 5%;
+  }
+
+  @include desktop {
     padding: 3% 5%;
   }
 
@@ -171,6 +107,29 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @include big-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include landscape-up {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 .main-small-block {
@@ -192,6 +151,62 @@ body {
   background: #1A76C8;
   border-radius: 8px;
   color: #FFFFFF;
+
+  @include landscape-up {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    border: 1px solid #1A76C8;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color:#FFFFFF;
+    color: #1A76C8;
+  }
+
+  @include mobile {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    border: 1px solid #1A76C8;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color:#FFFFFF;
+    color: #1A76C8;
+  }
+
+  @include fold {
+    height: 35px;
+    font-size: 14px;
+    line-height: 29px;
+  }
+}
+
+.main-small-block-btn:hover {
+  border: 1px solid #1A76C8;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color:#FFFFFF;
+  color: #1A76C8;
+
+  @include landscape-up {
+    border: none;
+    cursor: pointer;
+    background: #1A76C8;
+    border-radius: 8px;
+    color: #FFFFFF;
+  }
+
+  @include mobile {
+    border: none;
+    cursor: pointer;
+    background: #1A76C8;
+    border-radius: 8px;
+    color: #FFFFFF;
+  }
 }
 
 .main-small-block-left {
@@ -203,7 +218,17 @@ body {
   border-radius: 8px;
 }
 
-.main-small-block-left-card {
+#list {
+  @include landscape-up {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.main-small-block-left-card, .small-block-left-card {
   height: 87px;
   display: flex;
   flex-direction: row;
@@ -212,16 +237,63 @@ body {
   cursor: pointer;
   background: #FFFFFF;
   border-radius: 8px;
+
+ 
+
+  @include fold {
+    height: 55px;
+  }
+}
+
+.small-block-left-card {
+  background: transparent;
 }
 
 .main-small-block-left-card:hover {
   background: #E4F1FD;
+  border-radius: 8px;
 }
+
+.left-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-card:hover {
+  background: #E4F1FD;
+  border-radius: 8px;
+  height: 100%;
+}
+
+
 
 .left-card-img {
   width: 48px;
   height: 48px;
   margin: 0 12px 0 16px;
+
+  @include fold {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.left-card-icon {
+  width: 0;
+  height: 0;
+  @include landscape-up {
+    width: 11px;
+    height: 8px;
+    margin-right: 4%;
+  }
+
+  @include mobile {
+    width: 11px;
+    height: 8px;
+    margin-right: 4%;
+  }
 }
 
 .left-card-name {
@@ -231,36 +303,87 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 21px;
-  color: rgba(0, 0, 0, 0.94)
+  color: rgba(0, 0, 0, 0.94);
+
+  @include fold {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .main-big-block {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 48px;
+
+  @include desktop {
+    margin-left: 20px;
+  }
+
+  @include landscape-up {
+    margin: 26px 0 0 0;
+  }
+
+  @include mobile {
+    margin: 26px 0 0 0;
+  }
+
+  
 }
 
 .main-big-block-head {
   display: flex;
   flex-direction: row;
+
+  @include landscape-up {
+    width: 100%;
+  }
+  
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .main-big-block-head-img {
   width: 64px;
   height: 64px;
+
+  @include mobile {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .main-big-block-head-content {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
+
+  @include landscape-up {
+    width: 100%;
+  }
+  
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .head-content-main {
   display: flex;
   flex-direction: row;
+
+  @include landscape-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .head-content-main-title {
@@ -270,7 +393,34 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.94);
+
+  @include landscape-up {
+    width:  160px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+
+  @include mobile {
+    width:  160px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+
+  @include galaxy {
+    width: 121px;
+  }
+
+  @include fold {
+    font-size: 15px;
+    line-height: 22px;
+    width: 110px;
+  }
 }
+
 
 .head-content-main-btn {
   display: flex;
@@ -292,6 +442,21 @@ body {
   color: #1A76C8;
   background: #E4F1FD;
   border-radius: 8px;
+
+  @include landscape-up {
+    margin-left: 0;
+  }
+
+  @include mobile {
+    margin-left: 0;
+  }
+
+  @include fold {
+    margin-left: 0;
+    width: 80px;
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
 
 .head-content-text {
@@ -302,12 +467,30 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.48);
+
+  @include fold {
+    font-size: 11px;
+    line-height: 13px;
+  }
 }
 
 .main-big-block-head-additionally {
   display: flex;
   flex-direction: row;
   margin-top: 18px;
+
+  @include landscape-up {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
 }
 
 .block-head-additionally-text {
@@ -318,6 +501,24 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.94);
+   @include landscape-up {
+    width: 207px;
+    margin-top: 19px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include mobile {
+    width: 207px;
+    margin-top: 19px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include fold {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .block-head-additionally-container {
@@ -330,6 +531,19 @@ body {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 100px;
+   @include landscape-up {
+    width: 279px;
+    margin: 11px 0;
+  }
+
+  @include mobile {
+    width: 279px;
+    margin: 11px 0;
+  }
+
+  @include fold {
+    width: 245px;
+  }
 }
 
 .block-head-additionally-container-text {
@@ -340,6 +554,23 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.94);
+
+  @include landscape-up {
+    padding: 19px 21px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include mobile {
+    padding: 19px 21px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include fold {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .block-head-additionally-container-btn {
@@ -353,6 +584,28 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+
+  @include phone {
+    height: 944px;
+  } 
+
+  @include landscape-up {
+    height: 770px;
+    width: 100%;
+  }
+
+  @include mobile {
+    height: 600px;
+    width: 100%;
+  }
+
+  @include portrait-up {
+    height: 640px;
+  }
+
+  @include galaxy {
+    height: 640px;
+  }
 }
 
 .main-big-block-basic-title {
@@ -362,18 +615,45 @@ body {
   font-size: 24px;
   line-height: 29px;
   color: rgba(0, 0, 0, 0.94);
+
+  @include landscape-up {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include fold {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .main-big-block-basic-buttons {
   display: flex;
   flex-direction: row;
+
+  @include landscape-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
 }
 
 .block-basic-buttons-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 26px 15px;
+  margin: 26px 0;
   padding: 13px 16px;
   width: 240px;
   height: 64px;
@@ -388,17 +668,68 @@ body {
   border-radius: 8px;
   background-color: #fff;
   color: #1A76C8;
+
+   @include landscape-up {
+    font-size: 14px;
+    line-height: 17px;
+    width: 160px;
+    padding: 0;
+    margin: 31px 3px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 17px;
+    width: 160px;
+    padding: 0;
+    margin: 31px 3px;
+  }
+  @include portrait-up {
+    width: 200px;
+    height: 50px;
+    padding: 5px 7px;
+  }
+
+  @include galaxy {
+    width: 140px;
+    height: 60px;
+    padding: 5px 7px;
+
+  }
+
+  @include fold {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+
+.right {
+  margin-left: 20px;
 }
 
 .main-big-block-basic-list {
   display: flex;
   flex-direction: row;
+
+  @include landscape-up {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
 } 
 
 .main-big-block-basic-list-containers {
   display: flex;
   flex-direction: column;
   width: 288px;
+
+  @include fold {
+    width: 260px;
+  }
 }
 
 .list-containers-text {
@@ -409,6 +740,21 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
+
+  @include landscape-up {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include fold {
+    font-size: 13px;
+    line-height: 17px;
+  }
 }
 
 .list-containers-checkbox {
@@ -429,6 +775,33 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.94);
+  @include desktop {
+    width: 45%;
+    margin: 0;
+  }
+
+   @include phone {
+    width: 40%;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include landscape-up {
+    width: 65%;
+    font-size: 16px;
+    line-height: 19px;  
+  }
+
+  @include mobile {
+    width: 65%;
+    font-size: 16px;
+    line-height: 19px;  
+  }
+
+  @include fold {
+    font-size: 13px;
+    line-height: 19px;
+  }
 }
 
 .list-text-checkbox {
@@ -444,6 +817,29 @@ body {
   box-sizing: border-box;
   border-radius: 13px;
   background: #FDFDFF;
+  @include desktop {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  @include phone {
+    width: 100%;
+    margin: 130px 0;
+  }
+
+   @include landscape-up { 
+    margin: 50px 0;
+    width: 100%;
+  }
+
+  @include mobile { 
+    margin: 50px 0;
+    width: 100%;
+  }
+
+  @include portrait-up {
+     margin: 30px 0 30px 0;
+  }
 }
 
 .block-basic-chart-information {
@@ -452,7 +848,18 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 24px;
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include portrait-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
 
 .basic-chart-information-title {
   text-align: center;
@@ -462,11 +869,72 @@ body {
   font-size: 24px;
   line-height: 29px;
   color: rgba(0, 0, 0, 0.94);
+
+  @include landscape-up {
+    align-self: center;
+  }
+
+  @include mobile {
+    text-align: start;
+  }
+
+  @include fold {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.basic-chart-information-container {
+  display: flex;
+  flex-direction: row;
+
+   @include landscape-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include portrait-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .basic-chart-information-value {
   display: flex;
   flex-direction: column;
+  margin: 0 25px 0 0;
+
+  @include desktop {
+    text-align: center;
+    margin: 0 15px;
+  }
+
+  @include landscape-up {
+    margin: 0;
+  }
+
+  @include mobile {
+    margin: 0;
+  }
+
+  @include portrait-up {
+    margin: 38px 25px 0 0;
+  }
+
+  @include fold {
+    padding-top: 20px;
+    margin: 0 auto;
+  }
 }
 
 .basic-chart-information-value-text {
@@ -476,6 +944,11 @@ body {
   font-size: 12px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.72);
+
+  @include fold {
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
 
 .basic-chart-information-value-accoun {
@@ -485,6 +958,11 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+
+  @include fold {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .basic-chart-information-list {
@@ -493,6 +971,21 @@ body {
   border: 1px solid #EBEBEB;
   box-sizing: border-box;
   border-radius: 13px;
+  @include desktop {
+    margin: 0;
+  }
+
+  @include landscape-up {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  @include phone {
+    display: none;
+  }
 }
 
 .basic-chart-information-date {
@@ -558,7 +1051,137 @@ ul li ul li {
   color: rgba(0, 0, 0, 0.94)
 }
 
-canvas {
-  margin: 40px;
-  border: 1px solid black;
+
+#chart_div  svg{
+  @include landscape-up {
+    display: none;
+  }
+
+  @include mobile {
+   display: none;
+  }
+}
+
+/* AXES */
+/* ticks */
+.axis line {
+  stroke: #c9c8c8;
+  stroke-width: 0.5;
+  shape-rendering: crispEdges;
+}
+
+/* axis contour */
+.axis path {
+  stroke: #c9c8c8;
+  stroke-width: 0.7;
+  shape-rendering: crispEdges;
+}
+
+/* axis text */
+.axis text {
+  fill: #777777;
+  font-family: Lato;
+  font-size: 120%;
+}
+
+/*g.axis.axis-y > g.tick.unactive line {
+  stroke-dasharray: 4;
+}*/
+
+g.axis.axis-y > g.tick.unactive text {
+  display: none;
+}
+
+/* LINE CHART */
+path {
+  stroke-width: 4;
+  fill: none;
+  stroke: #1A76C8;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #0C3152;
+
+  @include big-desktop {
+    width: 100%;
+  }
+}
+
+.footer-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4% ;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  @include mobile {
+
+    width: 30%;
+  }
+}
+
+.filling {
+  padding: 2% 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  cursor:pointer;
+  color: #FFFFFF;
+  @include mobile {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @include fold {
+    padding: 5% 0;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container-icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  box-sizing: content-box;
+  border: none;
+  border-radius: 50px;
+  background: #1A76C8;
+  @include mobile {
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+  }
+}
+
+.icons-logo {
+  @include mobile {
+    width: 13px;
+    height: 12px;
+  }
 }
