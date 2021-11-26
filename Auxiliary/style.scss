@@ -321,6 +321,10 @@ body {
     margin-left: 20px;
   }
 
+  @include landscape {
+    margin: 0 50px;
+  }
+
   @include landscape-up {
     margin: 26px 0 0 0;
   }
@@ -767,39 +771,31 @@ body {
 }
 
 .list-text {
-  width: 824px;
-  margin: 16px 0 16px 24px;
+  margin: 16px 24px;
   font-family: Lato;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.94);
-  @include desktop {
-    width: 45%;
-    margin: 0;
-  }
 
    @include phone {
-    width: 40%;
     font-size: 16px;
     line-height: 19px;
   }
 
   @include landscape-up {
-    width: 65%;
+    
     font-size: 16px;
     line-height: 19px;  
   }
 
   @include mobile {
-    width: 65%;
     font-size: 16px;
     line-height: 19px;  
   }
 
   @include fold {
-    font-size: 13px;
     line-height: 19px;
   }
 }

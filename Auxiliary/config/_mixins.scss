@@ -36,6 +36,12 @@
   } 
 } 
 
+@mixin landscape {
+  @media (min-width: $landscape) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (max-width: $desktop) {
     @content;
