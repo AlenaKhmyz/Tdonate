@@ -864,20 +864,20 @@ body {
 
 @media (max-width: 769px) {
   .main-big-block-basic {
-    height: 600px;
+    height: 100%;
     width: 100%;
   }
 }
 
 @media (max-width: 600px) {
   .main-big-block-basic {
-    height: 640px;
+    height: 100%;
   }
 }
 
 @media (max-width: 360px) {
   .main-big-block-basic {
-    height: 640px;
+    height: 100%;
   }
 }
 
@@ -1071,6 +1071,12 @@ body {
   width: 288px;
 }
 
+@media (max-width: 360px) {
+  .main-big-block-basic-list-containers {
+    width: 238px;
+  }
+}
+
 @media (max-width: 290px) {
   .main-big-block-basic-list-containers {
     width: 260px;
@@ -1157,6 +1163,175 @@ body {
   cursor: pointer;
 }
 
+.list-checkbox-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.list-checkbox-active-desciption {
+  padding: 20px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.long {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1030px) {
+  .long {
+    width: 141px;
+  }
+}
+
+.list-checkbox-active-name {
+  width: 550px;
+  padding: 20px;
+  margin-left: 20px;
+  border: 1px solid #E0E0E0;
+  background-color: #FDFDFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+@media (max-width: 1030px) {
+  .list-checkbox-active-name {
+    width: 327px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 769px) {
+  .list-checkbox-active-name {
+    width: 350px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-checkbox-active-name {
+    width: 303px;
+  }
+}
+
+@media (max-width: 360px) {
+  .list-checkbox-active-name {
+    width: 200px;
+    padding: 10px;
+  }
+}
+
+.list-checkbox-active-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 360px) {
+  .list-checkbox-active-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.list-checkbox-active-container-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 20px 20px 0;
+}
+
+.list-checkbox-active-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 255px;
+  padding: 10px 10px 10px 20px;
+  margin-left: 20px;
+  border: 1px solid #E0E0E0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100px;
+}
+
+@media (max-width: 1300px) {
+  .list-checkbox-active-amount {
+    width: 243px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .list-checkbox-active-amount {
+    width: 144px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-checkbox-active-amount {
+    width: 129px;
+  }
+}
+
+.list-checkbox-active-amount-money {
+  width: 100%;
+  border: none;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+  background-color: #FDFDFF;
+}
+
+.list-checkbox-active-amount-money:focus {
+  outline: none;
+}
+
+.list-checkbox-active-amount-label {
+  height: 15px;
+  width: 10px;
+  margin: 2px 5px;
+}
+
 .main-big-block-basic-chart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1184,7 +1359,7 @@ body {
 @media (max-width: 1030px) {
   .main-big-block-basic-chart {
     width: 100%;
-    margin: 130px 0;
+    margin: 50px 0;
   }
 }
 

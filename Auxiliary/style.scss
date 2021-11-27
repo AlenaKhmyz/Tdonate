@@ -599,16 +599,16 @@ body {
   }
 
   @include mobile {
-    height: 600px;
+    height: 100%;
     width: 100%;
   }
 
   @include portrait-up {
-    height: 640px;
+    height: 100%;
   }
 
   @include galaxy {
-    height: 640px;
+    height: 100%;
   }
 }
 
@@ -731,6 +731,10 @@ body {
   flex-direction: column;
   width: 288px;
 
+  @include galaxy {
+    width: 238px;
+  }
+
   @include fold {
     width: 260px;
   }
@@ -804,6 +808,128 @@ body {
   cursor: pointer;
 }
 
+.list-checkbox-active {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-checkbox-active-desciption {
+  padding: 20px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.long {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include phone {
+    width: 141px;
+  }
+}
+
+.list-checkbox-active-name {
+  width: 550px;
+  padding: 20px;
+  margin-left: 20px;
+  border: 1px solid #E0E0E0;
+  background-color: #FDFDFF;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+
+  @include phone {
+    width: 327px;
+    padding: 10px;
+  }
+
+  @include mobile {
+    width: 350px;
+    padding: 10px;
+  }
+
+  @include portrait-up {
+    width: 303px;
+  }
+  
+  @include galaxy {
+    width: 200px;
+    padding: 10px;
+  }
+}
+
+.list-checkbox-active-container {
+  display: flex;
+  flex-direction: row;
+
+  @include galaxy {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.list-checkbox-active-container-block {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 0;
+}
+
+.list-checkbox-active-amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 255px;
+  padding: 10px 10px 10px 20px;
+  margin-left: 20px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 100px;
+  @include desktop {
+    width: 243px;
+  }
+
+  @include phone {
+    width: 144px;
+  }
+
+   @include portrait-up {
+    width: 129px;
+  }
+}
+
+.list-checkbox-active-amount-money {
+  width: 100%;
+  border: none;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+  background-color: #FDFDFF;
+}
+
+.list-checkbox-active-amount-money:focus {
+  outline: none;
+
+}
+
+.list-checkbox-active-amount-label {
+  height: 15px;
+  width: 10px;
+  margin: 2px 5px;
+}
+
+
 .main-big-block-basic-chart {
   display: flex;
   flex-direction: column;
@@ -820,7 +946,7 @@ body {
 
   @include phone {
     width: 100%;
-    margin: 130px 0;
+    margin: 50px 0;
   }
 
    @include landscape-up { 

@@ -123,8 +123,28 @@
           </div>
           <div class="list-containers-block">
             <p class="list-text">
-              <input type="checkbox" name="a"  class="list-text-checkbox">
+              <input type="checkbox" name="a"  class="list-text-checkbox" id="active-checkbox" checked>
               Включить сбор средств
+              <div class="list-checkbox-active" id="active-form" >
+                <p class="list-checkbox-active-desciption">Название сбора средств</p>
+                <input class="list-checkbox-active-name" value="Сбор на вкусняшки">
+                <div class="list-checkbox-active-container">
+                  <div class="list-checkbox-active-container-block">
+                    <p class="list-checkbox-active-desciption">Начать сбор с</p>
+                      <div class="list-checkbox-active-amount">
+                        <input class="list-checkbox-active-amount-money" value="1000">
+                        <img  class="list-checkbox-active-amount-label" src="./img/icons/rouble.png">
+                      </div>
+                  </div>
+                  <div class="list-checkbox-active-container-block">
+                    <p class="list-checkbox-active-desciption long">Закончить при достижении</p>
+                    <div class="list-checkbox-active-amount">
+                      <input class="list-checkbox-active-amount-money" value="9000">
+                      <img src="./img/icons/rouble.png" class="list-checkbox-active-amount-label">
+                    </div>
+                  </div>
+                </div> 
+              </div>
             </p>
           </div>
           <div class="main-big-block-basic-chart">
@@ -194,6 +214,11 @@
         $("#list").slideToggle(200);
       }
     });
+
+     $('#active-checkbox').click(function() {
+       $("#active-form").slideToggle(200)
+     })
+
 
   </script>
   <script src="main.js"></script>
