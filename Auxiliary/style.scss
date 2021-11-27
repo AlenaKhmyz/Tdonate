@@ -584,6 +584,59 @@ body {
   background-color: #fff;
 }
 
+.main-big-block-active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include phone {
+    display: none;
+  }
+}
+
+.main-big-block-active-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 100px 0 0;
+}
+
+.main-big-block-active-container-description {
+  padding-bottom: 4px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.main-big-block-active-container-value {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.main-big-block-active-btn {
+  width: 140px;
+  margin: 20px 0 0 0;
+  padding: 4px 0;
+  border: none;
+  cursor: pointer;
+  background: #E4F1FD;
+  border-radius: 8px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #1A76C8;
+}
+
+
+
 .main-big-block-basic {
   display: flex;
   flex-direction: column;
