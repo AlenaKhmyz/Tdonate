@@ -767,6 +767,7 @@ body {
 .main-big-block-basic-list {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 
   @include landscape-up {
     display: flex;
@@ -793,8 +794,20 @@ body {
   }
 }
 
+.list-containers-block {
+  display: flex;
+  margin: 10px;
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+
 .list-containers-text {
-  margin: 16px 21px;
+  width: 80%;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -818,16 +831,30 @@ body {
   }
 }
 
-.list-containers-checkbox {
-  cursor: pointer;
+input[type="checkbox"] {
+  height: 20px;
+  width: 26px;
+  margin-right: 7px;
+  cursor: pointer;  
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:not(:checked) {
+  border: 1px solid #E0E0E0;
 }
 
 
-.list-containers-block:hover {
+.active {
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  border-radius: 13px;
   background-color: #FDFDFF;
 }
 
 .list-text {
+  display: flex;
+  align-items: center;
   margin: 16px 24px;
   font-family: Lato;
   font-style: normal;
@@ -857,6 +884,8 @@ body {
   }
 }
 
+
+
 .list-text-checkbox {
   cursor: pointer;
 }
@@ -867,7 +896,7 @@ body {
 }
 
 .list-checkbox-active-desciption {
-  padding: 20px;
+  padding: 20px 20px 10px;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -933,7 +962,7 @@ body {
 .list-checkbox-active-container-block {
   display: flex;
   flex-direction: column;
-  margin: 20px 20px 20px 0;
+  margin: 10px 20px 20px 0;
 }
 
 .list-checkbox-active-amount {
