@@ -84,7 +84,7 @@
               </button>
           </div>
         </div>
-        <div class="main-big-block-active">
+        <div class="main-big-block-active" id="active-container">
           <div class="main-big-block-active-container">
             <p class="main-big-block-active-container-description">
               Активный сбор
@@ -246,6 +246,7 @@
 
      $('#active-checkbox').click(function() {
        $("#active-form").slideToggle(200)
+       $('#active-container').slideToggle(200)
      })
 
 
