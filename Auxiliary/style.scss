@@ -31,7 +31,7 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  padding: 1% 8.5%;
+  padding: 1% 7.8% 1% 8.5%;
   background: #1A76C8;
   @include mobile {
     padding: 3%;
@@ -86,7 +86,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 3% 13%;
+  padding: 3% 2% 3% 9%;
 
   @include big-desktop {
     align-self: center;
@@ -106,7 +106,6 @@ body {
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 
   @include big-desktop {
     display: flex;
@@ -135,6 +134,10 @@ body {
 .main-small-block {
   display: flex;
   flex-direction: column;
+
+  @include desktop {
+    margin-right: 20px;
+  }
 }
 
 .main-small-block-btn {
@@ -315,14 +318,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 48px;
+  margin: 0 0 0 100px;
 
   @include desktop {
     margin-left: 20px;
   }
 
   @include landscape {
-    margin: 0 50px;
+    margin: 0 0 0 50px;
   }
 
   @include landscape-up {
