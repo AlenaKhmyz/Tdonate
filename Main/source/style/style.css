@@ -68,7 +68,7 @@ body {
           align-items: center;
   text-align: center;
   width: 100%;
-  padding: 1% 8.5%;
+  padding: 1% 8% 1% 8.5%;
   background: #1A76C8;
 }
 
@@ -165,7 +165,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 3% 13%;
+  padding: 3% 2% 3% 9%;
 }
 
 @media (min-width: 1920px) {
