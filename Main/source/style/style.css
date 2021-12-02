@@ -748,6 +748,7 @@ body {
   margin: 4%;
   height: 60px;
   width: 60px;
+  border-radius: 50px;
 }
 
 .big-block-title {
