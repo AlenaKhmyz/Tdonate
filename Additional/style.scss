@@ -205,17 +205,35 @@ li:before {
   color: #FFFFFF;
 }
 
+.li-strong:before {
+  width: 65px;
+  height: 50px;
+}
+
 .main-list {
+  width: 530px;
   margin-top: 50px;
 }
 
 .main-list-element {
   display: flex;
   justify-content: row;
+  align-items: center;
   margin-bottom: 50px;
 }
 
 .main-list-element-text {
+  display: flex;
+  text-align: start;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.strong {
   display: inline-block;
   text-align: start;
   align-self: center;
@@ -229,6 +247,78 @@ li:before {
 
 .main-list-element-text-strong {
   padding: 0 4px;
+}
+
+.trasposition {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-list-element-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 243px;
+  margin-top: 8px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 100px;
+   @include landscape-up {
+    width: 279px;
+    margin: 11px 0;
+  }
+
+  @include mobile {
+    width: 279px;
+    margin: 11px 0;
+  }
+
+  @include fold {
+    width: 245px;
+  }
+}
+
+.main-list-element-container-text {
+  padding: 13px 0 13px 21px ;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.94);
+
+  @include landscape-up {
+    padding: 19px 21px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include mobile {
+    padding: 19px 21px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include fold {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.main-list-element-container-btn {
+  margin-right: 21px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.main-big-block-active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include phone {
+    display: none;
+  }
 }
 
 .footer {
