@@ -175,6 +175,62 @@ body {
   }
 }
 
+ol{
+  counter-reset: myCounter;
+}
+
+li{
+  list-style: none;
+}
+
+li:before {
+  counter-increment: myCounter;
+  content:counter(myCounter);
+  color: white;
+  background: #2980B9;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 32px 0px 0px;
+  line-height: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.main-list {
+  margin-top: 50px;
+}
+
+.main-list-element {
+  display: flex;
+  justify-content: row;
+  margin-bottom: 50px;
+}
+
+.main-list-element-text {
+  display: inline-block;
+  text-align: start;
+  align-self: center;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.main-list-element-text-strong {
+  padding: 0 4px;
+}
+
 .footer {
   display: flex;
   justify-content: center;
