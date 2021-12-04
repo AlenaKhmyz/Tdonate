@@ -1,0 +1,262 @@
+@import './config/mixins';
+@import './config/variables';
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/latoregular.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lato';
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 1% 7.8% 1% 8.5%;
+  background: #1A76C8;
+  @include mobile {
+    padding: 3%;
+  }
+
+  @include big-desktop {
+    width: 100%;
+  }
+}
+
+.big-desktop {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @include big-desktop {
+    align-self: center;
+    width: 1600px;
+  }
+}
+
+.logo {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  @include fold {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.withdraw {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  @include fold {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+
+
+.wrap {
+  width: 100%;
+  padding: 80px 330px 160px 330px;
+
+  @include big-desktop {
+    align-self: center;
+    width: 1600px;
+    padding: 3% 22% 7% 22%;
+  }
+
+  @include desktop {
+    padding: 3% 22% 7% 22%;
+  }
+
+  @include phone {
+    padding: 3% 19% 7% 19%;;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 100px;
+  border: 2px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 24px;
+
+  @include big-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include landscape-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+
+  
+}
+
+.main-title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 53px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.94);
+
+   @include landscape-up {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: rgba(0, 0, 0, 0.94);
+  }
+
+  @include fold {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.94);
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #0C3152;
+
+  @include big-desktop {
+    width: 100%;
+  }
+}
+
+.footer-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4% ;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  @include mobile {
+
+    width: 30%;
+  }
+}
+
+.filling {
+  padding: 2% 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  cursor:pointer;
+  color: #FFFFFF;
+  @include mobile {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @include fold {
+    padding: 5% 0;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container-icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  box-sizing: content-box;
+  border: none;
+  border-radius: 50px;
+  background: #1A76C8;
+  @include mobile {
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+  }
+}
+
+.icons-logo {
+  @include mobile {
+    width: 13px;
+    height: 12px;
+  }
+}
