@@ -33,6 +33,11 @@ body {
   width: 100%;
   padding: 1% 7.8% 1% 8.5%;
   background: #1A76C8;
+
+  @include phone {
+    padding: 3% 7.8% 3% 8.5%;
+  }
+
   @include mobile {
     padding: 3%;
   }
@@ -88,18 +93,35 @@ body {
   width: 100%;
   padding: 80px 330px 160px 330px;
 
+  @include big {
+    padding: 0;
+  }
+
   @include big-desktop {
     align-self: center;
     width: 1600px;
-    padding: 3% 22% 7% 22%;
+    padding: 6% 22% 9.8% 22%;
   }
 
   @include desktop {
-    padding: 3% 22% 7% 22%;
+    padding: 5% 22% 9.8% 22%;
   }
 
   @include phone {
-    padding: 3% 19% 7% 19%;;
+    padding: 22% 10% 35% 10%;
+  }
+
+  @include mobile {
+    padding: 8% 2% 15% 2%;
+
+  }
+
+  @include portrait-up {
+    padding: 21.2% 5% 35% 7%;
+  }
+
+  @include galaxy {
+    padding: 19% 4% 25% 4%;
   }
 }
 
@@ -113,18 +135,28 @@ body {
   box-sizing: border-box;
   border-radius: 24px;
 
+  @include big {
+    border: none;
+  }
+
   @include big-desktop {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-content: center;
+    border: none;
+    padding: 54px 60px;
   }
 
   @include desktop {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 54px 60px;
+  }
+
+  @include phone {
+    padding: 54px 60px;
   }
 
   @include landscape-up {
@@ -133,6 +165,7 @@ body {
     align-items: center;
     justify-content: center;
     border: none;
+    padding: 3% 0 4.5% 0;
 
   }
 
@@ -141,7 +174,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 54px 100px;
     border: none;
+  }
+
+  @include portrait-up {
+    padding: 0;
+  }
+
+  @include galaxy {
+    padding: 0;
   }
 
   
@@ -151,18 +193,57 @@ body {
   font-family: Lato;
   font-style: normal;
   font-weight: 600;
-  font-size: 44px;
+  font-size: 39px;
   line-height: 53px;
   text-align: center;
   color: rgba(0, 0, 0, 0.94);
+
+  @include big {
+    font-size: 30px;
+    line-height: 53px;
+  }
+
+  @include big-desktop {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 46px;
+    color: #000000;
+  }
+
+  @include phone {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 46px;
+    color: #000000;
+  }
 
    @include landscape-up {
     font-family: Lato;
     font-style: normal;
     font-weight: 600;
+    font-size: 35px;
+    line-height: 45px;
+    color: rgba(0, 0, 0, 0.94);
+  }
+
+  @include portrait-up {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
     font-size: 24px;
     line-height: 29px;
-    color: rgba(0, 0, 0, 0.94);
+  }
+
+  @include galaxy {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
   }
 
   @include fold {
@@ -203,16 +284,48 @@ li:before {
   font-size: 24px;
   line-height: 29px;
   color: #FFFFFF;
+
+  @include portrait-up {
+    margin: 0px;
+  }
+
+  @include galaxy {
+    margin: 0px;
+  }
 }
 
 .li-strong:before {
-  width: 65px;
+  width: 60px;
   height: 50px;
+
+  @include phone {
+    width: 50px;
+    height: 50px;
+  }
+
+  @include mobile {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .main-list {
   width: 530px;
   margin-top: 50px;
+
+  @include phone {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .main-list-element {
@@ -231,9 +344,87 @@ li:before {
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+
+  @include phone {
+    width: 440px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+  }
+
+  @include landscape-up {
+    width: 376px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+  }
+
+  @include portrait-up {
+    width: 247px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 30px;
+  }
+
+  @include galaxy {
+    width: 247px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 30px;
+  }
+
+  @include fold {
+    width: 207px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 30px;
+  }
+}
+
+.trasposition-text {
+  padding: 0;
+
+  @include portrait-up {
+    width: 211px;
+  }
+
+  @include galaxy {
+    width: 211px;
+  }
+
+  @include fold {
+    width: 100%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 0px;
+  }
+  
 }
 
 .strong {
+  width: 100%;
   display: inline-block;
   text-align: start;
   align-self: center;
@@ -243,6 +434,60 @@ li:before {
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+
+  @include phone {
+    width: 440px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+  }
+
+  @include landscape-up {
+    width: 376px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+  }
+
+  @include portrait-up {
+    width: 247px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 30px;
+  
+  }
+
+  @include galaxy {
+    width: 247px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 30px;
+  }
+
+  @include fold {
+    width: 207px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    padding-left: 30px;
+  }
 }
 
 .main-list-element-text-strong {
@@ -252,6 +497,19 @@ li:before {
 .trasposition {
   display: flex;
   flex-direction: column;
+  @include portrait-up {
+    padding-left: 30px;
+  }
+
+  @include galaxy {
+    padding-left: 30px;
+  }
+
+  @include fold {
+    width: 207px;
+    padding-left: 30px;
+  
+  }
 }
 
 .main-list-element-container {
@@ -263,18 +521,27 @@ li:before {
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 100px;
-   @include landscape-up {
-    width: 279px;
+
+  @include landscape-up {
+    width: 241px;
     margin: 11px 0;
   }
 
   @include mobile {
-    width: 279px;
+    width: 241px;
     margin: 11px 0;
   }
 
+  @include portrait-up {
+    width: 207px;
+  }
+
+  @include galaxy {
+    width: 205px;
+  }
+
   @include fold {
-    width: 245px;
+    width: 174px;;
   }
 }
 
@@ -300,6 +567,7 @@ li:before {
   }
 
   @include fold {
+    padding: 19px 10px;
     font-size: 14px;
     line-height: 16px;
   }
