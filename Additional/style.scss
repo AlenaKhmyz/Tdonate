@@ -93,14 +93,16 @@ body {
   width: 100%;
   padding: 80px 330px 160px 330px;
 
-  @include big {
-    padding: 0;
-  }
+  
 
   @include big-desktop {
     align-self: center;
     width: 1600px;
     padding: 6% 22% 9.8% 22%;
+  }
+
+  @include big {
+    padding: 0;
   }
 
   @include desktop {
@@ -144,7 +146,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: none;
     padding: 54px 60px;
   }
 
@@ -198,10 +199,6 @@ body {
   text-align: center;
   color: rgba(0, 0, 0, 0.94);
 
-  @include big {
-    font-size: 30px;
-    line-height: 53px;
-  }
 
   @include big-desktop {
     font-family: Lato;
