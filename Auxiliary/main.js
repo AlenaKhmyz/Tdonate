@@ -43,7 +43,6 @@
      //-----------------------------AXES------------------------------// 
 
     const yaxis = d3.axisLeft()
-       //.ticks(20, "s") 
       .tickValues([0, 0.75, 1.5, 2.25, 3])
       .tickFormat(v => v )
       .tickPadding(10)
@@ -51,8 +50,6 @@
       .scale(yScale);
 
     const xaxis = d3.axisBottom()
-      //.ticks(d3.timeDay.every(1)) 
-      //.ticks(data.length)
       .tickValues(data.map(point => point.x))
       .tickFormat((v) => dayjs(v).format("DD/MM"))
       .tickSize(-height)
