@@ -577,15 +577,6 @@ li:before {
   background-color: #fff;
 }
 
-.main-big-block-active {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  @include phone {
-    display: none;
-  }
-}
-
 .footer {
   display: flex;
   justify-content: center;
