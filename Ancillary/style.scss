@@ -179,9 +179,11 @@ body {
 .form-fields {
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 
 .form-fields-name {
+  margin-bottom: 8px;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -206,11 +208,10 @@ body {
 
 textarea {
 	overflow: auto;
-  // resize: none;
 }
 
 .form-fields-text {
-  padding: 14px 16px;
+  padding: 14px 253px 14px 16px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 24px;
