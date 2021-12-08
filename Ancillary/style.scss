@@ -171,6 +171,57 @@ body {
   border-radius: 8px;
 }
 
+.main-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fields-name {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.form-fields-enter {
+  width: 580px;
+  padding: 14px 16px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+textarea {
+	overflow: auto;
+  // resize: none;
+}
+
+.form-fields-text {
+  padding: 14px 16px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 24px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+}
+
 .footer {
   display: flex;
   justify-content: center;

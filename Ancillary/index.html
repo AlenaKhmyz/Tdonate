@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./source/style/">
+  <link rel="stylesheet" href="./source/style/style.css">
 
   
   <title>Tdonate</title>
@@ -22,8 +22,24 @@
 <!--main-->
   <div class="main">
    <div class="main-img">
-     <img class="img" src="./img/nature.png">
+      <img class="img" src="./img/nature.png">
    </div>
+    <div class="main-form">
+      <div class="form-fields">
+        <p class="form-fields-name">Название канала</p>
+        <input class="form-fields-enter" value="Демонстрационный канал">
+      </div>
+      <div class="form-fields">
+        <p class="form-fields-name">Описание</p>
+        <textarea class="form-fields-text"  wrap="off">
+           <!-- cols="30" rows="5" -->
+          🔥Вот так это выглядит.🔥
+          http://vk.com/lc - ссылки также работают. 
+          '"&gt;&lt;img src=x onerror=alert();&gt;
+          Сообщение отобразится в ленте канала.
+        </textarea>
+      </div>
+    </div>
   </div>
 </div>
 <!--footer-->
@@ -48,6 +64,11 @@
       </div>
     </div>
   </div>
+
+   <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script>
+    $('textarea').autoResize();
+  </script> -->
 
 </body>
 
