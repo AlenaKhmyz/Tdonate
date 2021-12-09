@@ -316,6 +316,93 @@ textarea {
   overflow: auto;
 }
 
+.form-little {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.little {
+  margin-bottom: 24px;
+  width: 280px;
+}
+
+.form-fields-little {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 24px;
+  width: 280px;
+  margin-left: 20px;
+}
+
+.form-fields-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 280px;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid #E0E0E0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100px;
+}
+
+@media (max-width: 1300px) {
+  .form-fields-amount {
+    width: 243px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .form-fields-amount {
+    width: 144px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-fields-amount {
+    width: 129px;
+  }
+}
+
+.form-fields-amount-money {
+  width: 100%;
+  border: none;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+  background-color: #FDFDFF;
+}
+
+.form-fields-money:focus {
+  outline: none;
+}
+
+.form-fields-amount-label {
+  height: 15px;
+  width: 10px;
+  margin: 2px 5px;
+}
+
 .form-fields-text {
   padding: 14px 253px 14px 16px;
   border: 1px solid #E0E0E0;
