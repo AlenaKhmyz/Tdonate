@@ -217,7 +217,7 @@ body {
 }
 
 textarea {
-	overflow: auto;
+	overflow: hidden;
 }
 
 .form-little {
@@ -284,7 +284,7 @@ textarea {
 }
 
 .form-fields-text {
-  padding: 14px 253px 14px 16px;
+  padding: 14px 16px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 24px;
@@ -294,6 +294,48 @@ textarea {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
+}
+
+.form-fields-elements {
+  margin-top: 8px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.main-button {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  margin-left: 272px;
+  margin-top: 80px;
+}
+
+.btn {
+  padding: 16px 24px;
+  border: 1px solid #FF4034;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+   transition: 0.5s;
+  cursor: pointer;
+  color: #FF4034;
+  background-color: #FFFFFF;
+
+}
+
+.btn:hover {
+   transition: 0.5s;
+  background-color: #FF4034;
+  color: #FFFFFF;
+
 }
 
 .footer {
