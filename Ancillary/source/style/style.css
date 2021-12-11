@@ -126,7 +126,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 80px 330px 160px 330px;
+  padding: 80px 430px 120px 430px;
 }
 
 @media (min-width: 1720px) {
@@ -268,7 +268,7 @@ body {
       -ms-flex-align: start;
           align-items: start;
   width: 100%;
-  margin-left: 272px;
+  margin-left: 90px;
   margin-bottom: 40px;
 }
 
@@ -447,7 +447,7 @@ textarea {
       -ms-flex-align: start;
           align-items: start;
   width: 100%;
-  margin-left: 272px;
+  margin-left: 90px;
   margin-top: 80px;
 }
 

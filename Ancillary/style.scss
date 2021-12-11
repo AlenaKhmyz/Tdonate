@@ -91,7 +91,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 80px 330px 160px 330px;
+  padding: 80px 430px 120px 430px;
 
   
 
@@ -169,7 +169,7 @@ body {
   display: flex;
   align-items: start;
   width: 100%;
-  margin-left: 272px;
+  margin-left: 90px;
   margin-bottom: 40px;
 }
 
@@ -223,6 +223,10 @@ textarea {
 .form-little {
   display: flex;
   flex-direction: row;
+  @include mobile {
+    display: flex;
+    flex-direction: co,umn;
+  }
 }
 
 .little {
@@ -310,7 +314,7 @@ textarea {
   display: flex;
   align-items: start;
   width: 100%;
-  margin-left: 272px;
+  margin-left: 90px;
   margin-top: 80px;
 }
 
@@ -332,7 +336,7 @@ textarea {
 }
 
 .btn:hover {
-   transition: 0.5s;
+  transition: 0.5s;
   background-color: #FF4034;
   color: #FFFFFF;
 
