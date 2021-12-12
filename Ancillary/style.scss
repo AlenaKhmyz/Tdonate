@@ -102,24 +102,21 @@ body {
   }
 
   @include big {
-    padding: 0;
+    padding: 4% 10% 7% 10%;
   }
 
   @include desktop {
     padding: 5% 22% 9.8% 22%;
   }
 
-  @include phone {
-    padding: 22% 10% 35% 10%;
-  }
 
   @include mobile {
-    padding: 8% 2% 15% 2%;
+    padding: 8% 6% 15% 6%;
 
   }
 
   @include portrait-up {
-    padding: 21.2% 5% 35% 7%;
+    padding: 14.2% 5% 21% 7%;
   }
 
   @include galaxy {
@@ -132,6 +129,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
 
   @include big-desktop {
@@ -160,6 +158,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   
@@ -167,27 +166,54 @@ body {
 
 .main-img {
   display: flex;
-  align-items: start;
-  width: 100%;
-  margin-left: 90px;
+  align-self: start;
   margin-bottom: 40px;
+  @include phone {
+    margin-bottom: 75px;
+  }
 }
 
 .img {
   width: 120px;
   height: 120px;
   border-radius: 8px;
+  
 }
 
 .main-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form-fields {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+
+   ::-webkit-scrollbar {
+     display: none;
+    width: 2px;
+   
+  }
+
+  ::-webkit-scrollbar-track {
+      background-color: rgb(255, 255, 255);
+        transform: translate(-30px);
+      
+  }
+
+  ::-webkit-scrollbar-thumb {
+      box-shadow: inset 0 0 6px rgba(41, 113, 219, 0.3);
+     
+  }
+  @include phone {
+    margin-bottom: 43px;
+  }
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
 }
 
 
@@ -203,7 +229,7 @@ body {
 }
 
 .form-fields-enter {
-  width: 580px;
+  width: 100%;
   padding: 14px 16px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
@@ -214,53 +240,87 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.little-field {
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  @include mobile {
+    width: 100%;
+  }
 }
 
 textarea {
-	overflow: hidden;
+	overflow: visible;
+  width: 100%;
+  border: none;
+  resize: none;
 }
 
 .form-little {
   display: flex;
   flex-direction: row;
+  width: 100%;
+
   @include mobile {
     display: flex;
-    flex-direction: co,umn;
+    flex-direction: column;
   }
 }
 
 .little {
   margin-bottom: 24px;
-  width: 280px;
+  width: 100%;
+
+   @include phone {
+    margin-bottom: 43px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .form-fields-little {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
-  width: 280px;
+  width: 100%;
   margin-left: 20px;
+  @include mobile {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 
 .form-fields-amount {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 280px;
+  width: 100%;
   padding: 10px 10px 10px 20px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 100px;
   @include desktop {
-    width: 243px;
+    width: 100%;
   }
 
   @include phone {
-    width: 144px;
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 
    @include portrait-up {
-    width: 129px;
+    width: 100%;
   }
 }
 
@@ -288,7 +348,7 @@ textarea {
 }
 
 .form-fields-text {
-  padding: 14px 16px;
+  padding: 16px 16px 2px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 24px;
@@ -298,6 +358,10 @@ textarea {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
+
+  @include galaxy {
+    padding: 14px 16px;
+  }
 }
 
 .form-fields-elements {
@@ -312,10 +376,22 @@ textarea {
 
 .main-button {
   display: flex;
-  align-items: start;
-  width: 100%;
-  margin-left: 90px;
+  align-self: start;
   margin-top: 80px;
+
+   @include phone {
+    margin-bottom: 78px;
+  }
+
+  @include mobile {
+    margin-top: 50px;
+    margin-bottom: 0px; 
+  }
+
+  @include portrait-up {
+    margin-top: 50px;
+    margin-bottom: 0px; 
+  }
 }
 
 .btn {
@@ -328,10 +404,14 @@ textarea {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-   transition: 0.5s;
+  transition: 0.5s;
   cursor: pointer;
   color: #FF4034;
   background-color: #FFFFFF;
+
+  @include fold {
+    font-size: 14px;
+  }
 
 }
 
