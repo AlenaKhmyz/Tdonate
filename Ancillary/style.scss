@@ -261,6 +261,11 @@ textarea {
   resize: none;
 }
 
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 .form-little {
   display: flex;
   flex-direction: row;

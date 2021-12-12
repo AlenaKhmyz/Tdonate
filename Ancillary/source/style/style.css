@@ -376,6 +376,11 @@ textarea {
   resize: none;
 }
 
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 .form-little {
   display: -webkit-box;
   display: -ms-flexbox;
