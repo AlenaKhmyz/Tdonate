@@ -247,6 +247,29 @@ body {
 
 }
 
+.main-img {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.img-card {
+  border: none; 
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.img-card:hover {
+  border: 4px solid #1A76C8;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.card:hover {
+  width: 100%;
+  height: 100%;
+}
+
 .footer {
   display: flex;
   justify-content: center;
