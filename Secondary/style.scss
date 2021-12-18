@@ -285,7 +285,7 @@ body {
 .main-card {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 46px;
 }
 
 .main-card-field {
@@ -359,6 +359,86 @@ body {
   text-align: center;
   border: none;
   background: #F9F9F9;
+}
+
+.main-phone {
+  display: flex;
+  flex-direction: column;
+  margin-top: 46px;
+}
+
+.main-phone-title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.main-phone-field {
+  width: 580px;
+  margin-top: 8px;
+  padding: 14px 16px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.main-payment {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-payment-text {
+  margin-top: 16px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.main-payment-block {
+  display: flex;
+  flex-direction: row;
+  margin-top: 48px;
+}
+
+.payment-block-button {
+  padding: 16px 37px;
+  background: #1A76C8;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  color: #FFFFFF;
+}
+
+.payment-block-text {
+  margin-left: 24px;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.32);
+}
+
+.text-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color:#1A76C8;
 }
 
 input {
