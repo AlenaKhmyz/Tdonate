@@ -609,6 +609,116 @@ input {
   outline: none;
 }
 
+.main-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 55px;
+  width: 780px;
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.table-row-column-head {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+.table-row-column {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.status {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1A76C8;
+}
+
+.status-refusal {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FF4034;
+}
+
+.last {
+  border-radius: 0px 0px 7px 7px;
+  margin: 0.5px 0.5px;
+  background: #E0E0E0;
+}
+
+.header {
+  border-radius: 7px 7px 0px 0px;
+  margin: -0.5px 0.5px;
+  background: #E0E0E0;
+}
+
+.white {
+  background: #FFFFFF;
+}
+
+.grey {
+  background: #F2F2F2;
+}
+
+.first {
+  padding: 14px 81px 13px 24px;
+}
+
+.second {
+  padding: 14px 81px 0px 10px;
+}
+
+.second-cash {
+  padding: 14px 85px 0px 0px;
+}
+
+.third {
+  padding: 14px 186px 0px 0px;
+}
+
+.fourth {
+  padding: 14px 81px 0px 0px;
+}
+
+.fourth-status {
+  padding: 14px 81px 0px 83px;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
