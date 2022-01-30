@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="./source/style/style.css">
 
   
@@ -45,6 +42,11 @@
         <img src='./img/cards/phone.png' class="card">
       </div>
    </div>
+   <div class="checkbox-datas">
+    <p class="check"><input name="card" type="radio" value="nocard" class="checkbox"> <img src='./img/cards/mobile.png' class="img-icon">Телефон</p>
+    <p class="check"><input name="card" type="radio" value="nocard" class="checkbox"><img src='./img/cards/qiwi-icon.png' class="img-icon">QIWI Wallet</p>
+    <p class="check"><input name="card" type="radio" value="nocard" class="checkbox" checked><img src='./img/cards/card-icon.png' class="img-icon-card">Банковской картой</p>
+   </div>
    <div class="main-card">
      <input class="main-card-field" placeholder="Номер карты">
      <div class="main-card-form">
@@ -52,6 +54,7 @@
           <input class="card-form-data" placeholder="ММ">
           <p class="card-form-slash">/</p>
           <input class="card-form-data" placeholder="ГГ">
+          <input class="card-form-data validity" placeholder="Срок действия">
        </div>
        <div class="main-card-form-cvc">
           <input class="card-form-data-cvc" placeholder="CVC">

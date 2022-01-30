@@ -6,6 +6,11 @@
   src: url("../../fonts/latoregular.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Lato';
+  font-family: Lato Helvetica;
 }
 
 .head {
@@ -33,10 +38,6 @@ body {
   width: 100%;
   padding: 1% 7.8% 1% 8.5%;
   background: #1A76C8;
-
-  @include phone {
-    padding: 3% 7.8% 3% 8.5%;
-  }
 
   @include mobile {
     padding: 3%;
@@ -88,21 +89,7 @@ body {
   }
 
   @include phone {
-    margin: 0 80px;
-  }
-
-  @include landscape-up {
-    margin: 0 70px;
-  }
-
-  @include mobile {
-    margin: 0 70px;
-  }
-
-  @include portrait-up {
-    font-size: 19px;
-    line-height: 22px;
-    margin: 0 50px;
+    display: none;
   }
 }
 
@@ -125,8 +112,6 @@ body {
   width: 100%;
   padding: 80px 330px 120px 330px;
 
-  
-
   @include big-desktop {
     align-self: center;
     width: 1600px;
@@ -134,25 +119,15 @@ body {
   }
 
   @include big {
-    padding: 4% 10% 7% 10%;
+    padding: 4% 0% 7% 3%;
   }
 
   @include desktop {
     padding: 5% 22% 9.8% 22%;
   }
 
-
-  @include mobile {
-    padding: 8% 6% 15% 6%;
-
-  }
-
-  @include portrait-up {
-    padding: 14.2% 5% 21% 7%;
-  }
-
-  @include galaxy {
-    padding: 19% 4% 25% 4%;
+  @include phone {
+    padding: 3% 5%;
   }
 }
 
@@ -167,7 +142,7 @@ body {
   @include big-desktop {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 
@@ -180,15 +155,15 @@ body {
   @include landscape-up {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
   }
 
-  @include mobile {
+  @include phone {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
   }
@@ -199,6 +174,10 @@ body {
 .main-descriotion {
   display: flex;
   flex-direction: column;
+
+  @include phone {
+    margin-top: 30px;
+  }
 }
 
 .description-title {
@@ -207,6 +186,14 @@ body {
   font-weight: 600;
   font-size: 44px;
   line-height: 53px;
+
+  @include phone {
+    margin-top: 80px;
+  }
+
+  @include landscape-up {
+    margin-top: 30px;
+  }
 }
 
 .description-text {
@@ -251,6 +238,10 @@ body {
   display: flex;
   flex-direction: row;
   margin-top: 30px;
+
+  @include phone {
+    display: none;
+  }
 }
 
 .img-card {
@@ -283,10 +274,75 @@ body {
   border-radius: 9px;
 }
 
+.checkbox-datas {
+  display: none;
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  @include landscape-up {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.img-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0px 12px 0px 18px;
+  border-radius: 50%;
+}
+
+.img-icon-card  {
+  width: 32px;
+  height: 22px;
+  margin: 0px 12px 0px 18px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+
 .main-card {
   display: flex;
   flex-direction: column;
   margin-top: 46px;
+
+  @include phone {
+    margin-top: 20px;
+  }
+
+  @include landscape-up {
+    margin-top: 10px;
+  }
+
+  @include portrait-up {
+    margin-top: 0px;
+  }
 }
 
 .main-card-field {
@@ -294,13 +350,29 @@ body {
   padding: 10px 0px 10px 12px;
   background: #F9F9F9;
   border: 2px solid #C0C0BF;
-  box-sizing: border-box
+  box-sizing: border-box;
+
+  @include portrait-up {
+    width: 360px;
+  }
+
+  @include galaxy {
+    width: 336px;
+  }
+
+  @include fold {
+    width: 250px;
+  }
 }
 
 .main-card-form {
   display: flex;
   flex-direction: row;
   margin-top: 8px;
+  
+  @include phone {
+    margin-top: 15px;
+  }
 }
 
 .main-card-form-data {
@@ -323,6 +395,28 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.54);
+
+  @include portrait-up {
+    display: none;
+  }
+}
+
+.validity {
+  display: none;
+
+  @include portrait-up {
+    display: block;
+    width: 227px;
+    height: 38px;
+  }
+
+  @include galaxy {
+    width: 212px;
+  }
+
+  @include fold {
+    width: 140px;
+  }
 }
 
 .card-form-slash {
@@ -335,6 +429,11 @@ body {
   font-size: 20px;
   line-height: 41px;
   color: #C0C0BF;
+
+  @include portrait-up {
+    display: none
+  }
+
 }
 
 .main-card-form-cvc {
@@ -352,6 +451,20 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.54);
+
+  @include portrait-up {
+    margin: 0;
+    width: 120px;
+    height: 38px;
+  }
+
+  @include galaxy {
+    width: 110px;
+  }
+
+  @include fold {
+    width: 95px;
+  }
 }
 
 .card-form-data-cvc {
@@ -366,6 +479,16 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 46px;
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  @include portrait-up {
+    margin-top: 15px;
+  }
 }
 
 .main-phone-title {
@@ -390,6 +513,19 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.48);
+
+  @include portrait-up {
+    width: 360px;
+  }
+
+  @include galaxy {
+    width: 336px;
+  } 
+
+  @include fold {
+    padding: 14px 13px;
+    width: 250px;
+  }
 }
 
 .main-payment {
@@ -411,6 +547,26 @@ body {
   display: flex;
   flex-direction: row;
   margin-top: 48px;
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0 130px 0;
+  }
+
+  @include landscape-up { 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 130px;
+  }  
+
+  @include portrait-up {
+    margin: 30px 0 60px 0;
+  }
+
+  @include fold {
+    margin: 30px 0 30px 0;
+  }
 }
 
 .payment-block-button {
@@ -424,6 +580,18 @@ body {
   font-size: 14px;
   line-height: 12px;
   color: #FFFFFF;
+
+  @include phone {
+    width: 360px;
+  }
+
+  @include galaxy {
+    width: 100%;
+  }
+
+  @include fold {
+    width: 100%;
+  }
 }
 
 .payment-block-text {
@@ -435,12 +603,26 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: rgba(0, 0, 0, 0.32);
+
+  @include phone {
+    margin: 12px 0;
+    align-self: flex-start;
+    text-align: center;
+  }
+
+  @include portrait-up {
+    align-self: center;
+  }
 }
 
 .text-link {
   cursor: pointer;
   text-decoration: underline;
   color:#1A76C8;
+
+  @include phone {
+    text-align: center;
+  }
 }
 
 input {
@@ -456,6 +638,10 @@ input {
   border: 1px solid #BDBDBD;
   box-sizing: border-box;
   border-radius: 8px;
+
+  @include phone {
+    display: none;
+  }
 }
 
 .table-row  {
@@ -506,11 +692,28 @@ input {
   border-radius: 0px 0px 7px 7px;
   margin: 0.5px 0.5px;
   background: #E0E0E0;
+
+  @include big-desktop {
+    margin: 0.5px -0.5px;
+  }
+
+  @include big {
+    margin: 0.5px 0.5px;
+  }
 }
+
 .header {
   border-radius: 7px 7px 0px 0px;
   margin: -0.5px 0.5px;
   background: #E0E0E0;
+
+  @include big-desktop {
+    margin: 0.5px -0.5px;
+  }
+
+  @include big {
+    margin: 0.5px 0.5px;
+  }
 }
 
 .white {
