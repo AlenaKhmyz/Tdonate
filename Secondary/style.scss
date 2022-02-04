@@ -595,10 +595,10 @@ input {
 
 .main-table {
   @include start;
-  margin-top: 55px;
-  width: 780px;
+  margin-top: 54px;
+  width: 779px;
   border: 1px solid #BDBDBD;
-  box-sizing: border-box;
+  box-sizing: content-box;
   border-radius: 8px;
 
   @include phone {
@@ -646,30 +646,20 @@ input {
 
 .last {
   border-radius: 0px 0px 7px 7px;
-  margin: 0.5px 0.5px;
   background: #E0E0E0;
-
-  @include big-desktop {
-    margin: 0.5px -0.5px;
-  }
-
-  @include big {
-    margin: 0.5px 0.5px;
-  }
 }
 
 .header {
   border-radius: 7px 7px 0px 0px;
-  margin: -0.5px 0.5px;
   background: #E0E0E0;
-
-  @include big-desktop {
-    margin: 0.5px -0.5px;
-  }
-
   @include big {
-    margin: 0.5px 0.5px;
+    margin: -0.5px;
   }
+
+  @include desktop {
+    margin: 0px;
+  }
+
 }
 
 .white {
