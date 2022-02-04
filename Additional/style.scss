@@ -1,9 +1,9 @@
-@import './config/mixins';
-@import './config/variables';
+@import '../config/mixins';
+@import '../config/variables';
 
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/latoregular.woff") format("woff");
+  src: url("../../../fonts/latoregular.woff") format("woff");
 }
 
 * {
@@ -18,21 +18,11 @@ html {
 
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Lato';
+  @include body;
 }
 
 .head {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 1% 7.8% 1% 8.5%;
-  background: #1A76C8;
+  @include head;
 
   @include phone {
     padding: 3% 7.8% 3% 8.5%;
@@ -48,11 +38,7 @@ body {
 }
 
 .big-desktop {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include head-txt;
 
   @include big-desktop {
     align-self: center;
@@ -61,12 +47,7 @@ body {
 }
 
 .logo {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  @include logo;
 
   @include fold {
     font-size: 20px;
@@ -75,12 +56,7 @@ body {
 }
 
 .withdraw {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
+  @include withdraw;
   @include fold {
     font-size: 14px;
     line-height: 19px;
@@ -91,9 +67,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 80px 330px 160px 330px;
-
-  
+  padding: 134px 330px 203px 330px;
 
   @include big-desktop {
     align-self: center;
@@ -110,7 +84,7 @@ body {
   }
 
   @include phone {
-    padding: 22% 10% 35% 10%;
+    padding: 27% 10% 38% 10%;
   }
 
   @include mobile {
@@ -119,7 +93,7 @@ body {
   }
 
   @include portrait-up {
-    padding: 21.2% 5% 35% 7%;
+    padding: 26% 5% 49% 7%;
   }
 
   @include galaxy {
@@ -128,10 +102,8 @@ body {
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include center;
+  @include column;
   padding: 54px 100px;
   border: 2px solid #E0E0E0;
   box-sizing: border-box;
@@ -142,16 +114,13 @@ body {
   }
 
   @include big-desktop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center;
+    @include column;
     padding: 54px 60px;
   }
 
   @include desktop {
-    display: flex;
-    flex-direction: column;
+    @include column;
     justify-content: center;
     padding: 54px 60px;
   }
@@ -161,20 +130,16 @@ body {
   }
 
   @include landscape-up {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center;
+    @include column;
     border: none;
     padding: 3% 0 4.5% 0;
 
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center;
+    @include column;
     padding: 54px 100px;
     border: none;
   }
@@ -191,62 +156,45 @@ body {
 }
 
 .main-title {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 39px;
+  @include title;
   line-height: 53px;
   text-align: center;
   color: rgba(0, 0, 0, 0.94);
 
 
   @include big-desktop {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 39px;
+    @include title;
     line-height: 46px;
     color: #000000;
   }
 
   @include phone {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 39px;
+    @include title;
     line-height: 46px;
     color: #000000;
   }
 
    @include landscape-up {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
+    @include title;
     font-size: 35px;
     line-height: 45px;
     color: rgba(0, 0, 0, 0.94);
   }
 
   @include portrait-up {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
+    @include title;
     font-size: 24px;
     line-height: 29px;
   }
 
   @include galaxy {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
+    @include title;
     font-size: 24px;
     line-height: 29px;
   }
 
   @include fold {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
+    @include title;
     font-size: 17px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.94);
@@ -264,20 +212,16 @@ li{
 li:before {
   counter-increment: myCounter;
   content:counter(myCounter);
+  @include center;
+  @include title;
   color: white;
   background: #2980B9;
-  display: flex;
   text-align: center;
-  justify-content: center;
-  align-items: center;
   margin: 0px 32px 0px 0px;
   line-height: 40px;
   width: 50px;
   height: 50px;
   border-radius: 30px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   color: #FFFFFF;
@@ -311,62 +255,51 @@ li:before {
   margin-top: 50px;
 
   @include phone {
+    @include column;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
   @include mobile {
+    @include column;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 }
 
 .main-list-element {
-  display: flex;
-  justify-content: row;
+  @include row;
   align-items: center;
   margin-bottom: 50px;
 }
 
 .main-list-element-text {
+  @include text;
   display: flex;
   text-align: start;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
 
   @include phone {
+    @include text;
     width: 440px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 25px;
     line-height: 30px;
     color: #000000;
   }
 
   @include landscape-up {
+    @include text;
     width: 376px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
     line-height: 40px;
     color: #000000;
   }
 
   @include portrait-up {
+    @include text;
     width: 247px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -374,10 +307,8 @@ li:before {
   }
 
   @include galaxy {
+    @include text;
     width: 247px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -385,10 +316,8 @@ li:before {
   }
 
   @include fold {
+    @include text;
     width: 207px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -408,10 +337,8 @@ li:before {
   }
 
   @include fold {
+    @include text;
     width: 100%;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 19px;
     color: #000000;
@@ -421,42 +348,34 @@ li:before {
 }
 
 .strong {
+  @include text;
   width: 100%;
   display: inline-block;
   text-align: start;
   align-self: center;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
 
   @include phone {
+    @include text;
     width: 440px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 25px;
     line-height: 30px;
     color: #000000;
   }
 
   @include landscape-up {
+    @include text;
     width: 376px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
     line-height: 40px;
     color: #000000;
   }
 
   @include portrait-up {
+    @include text;
     width: 247px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -465,21 +384,15 @@ li:before {
   }
 
   @include galaxy {
+    @include field;
     width: 247px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
     color: #000000;
     padding-left: 30px;
   }
 
   @include fold {
+    @include text;
     width: 207px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 19px;
     color: #000000;
@@ -492,8 +405,7 @@ li:before {
 }
 
 .trasposition {
-  display: flex;
-  flex-direction: column;
+  @include column;
   @include portrait-up {
     padding-left: 30px;
   }
@@ -510,8 +422,7 @@ li:before {
 }
 
 .main-list-element-container {
-  display: flex;
-  flex-direction: row;
+  @include row;
   justify-content: space-between;
   width: 243px;
   margin-top: 8px;
@@ -543,9 +454,8 @@ li:before {
 }
 
 .main-list-element-container-text {
+  @include text;
   padding: 13px 0 13px 21px ;
-  font-family: Lato;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -578,27 +488,19 @@ li:before {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #0C3152;
-
+  
+  @include footer;
   @include big-desktop {
     width: 100%;
   }
 }
 
 .footer-containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 4% ;
-  width: 100%;
+  @include footer-containers;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include container;
   @include mobile {
 
     width: 30%;
@@ -606,17 +508,9 @@ li:before {
 }
 
 .filling {
-  padding: 2% 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  cursor:pointer;
-  color: #FFFFFF;
+  @include filling;
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
+    @include text;
     font-size: 12px;
     line-height: 14px;
   }
@@ -626,29 +520,14 @@ li:before {
     font-size: 10px;
     line-height: 14px;
   }
-
-
 }
 
 .icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  @include icons;
 }
 
 .container-icon {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  box-sizing: content-box;
-  border: none;
-  border-radius: 50px;
-  background: #1A76C8;
+  @include container-icon;
   @include mobile {
     height: 25px;
     width: 25px;

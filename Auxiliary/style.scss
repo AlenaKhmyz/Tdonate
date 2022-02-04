@@ -1,5 +1,5 @@
-@import './config/mixins';
-@import './config/variables';
+@import '../config/mixins';
+@import '../config/variables';
 
 @font-face {
   font-family: "Lato";
@@ -18,21 +18,11 @@ html {
 
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Lato';
+  @include body;
 }
 
 .head {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 1% 7.8% 1% 8.5%;
-  background: #1A76C8;
+  @include head;
   @include mobile {
     padding: 3%;
   }
@@ -43,11 +33,7 @@ body {
 }
 
 .big-desktop {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include head-txt;
 
   @include big-desktop {
     align-self: center;
@@ -56,12 +42,7 @@ body {
 }
 
 .logo {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  @include logo;
 
   @include fold {
     font-size: 20px;
@@ -70,12 +51,7 @@ body {
 }
 
 .withdraw {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
+  @include withdraw;
   @include fold {
     font-size: 14px;
     line-height: 19px;
@@ -104,36 +80,30 @@ body {
 }
 
 .main {
-  display: flex;
-  flex-direction: row;
+  @include row;
 
   @include big-desktop {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: center;
   }
 
   @include desktop {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: center;
   }
 
   @include landscape-up {
-    display: flex;
-    flex-direction: column;
+    @include column;
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: column;
+    @include column;
   }
 
 }
 
 .main-small-block {
-  display: flex;
-  flex-direction: column;
+  @include column;
 
   @include desktop {
     margin-right: 20px;
@@ -141,12 +111,10 @@ body {
 }
 
 .main-small-block-btn {
+  @include roboto;
   text-align: center;
   width: 280px;
   height: 64px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 21px;
   border: none;
@@ -155,8 +123,11 @@ body {
   border-radius: 8px;
   color: #FFFFFF;
 
+  @include phone {
+    width: 265px;
+  }
+
   @include landscape-up {
-    width: 100%;
     height: 48px;
     font-size: 16px;
     line-height: 19px;
@@ -213,12 +184,23 @@ body {
 }
 
 .main-small-block-left {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin: 16px 0;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 8px;
+
+  @include phone {
+    width: 290px;
+  }
+
+   @include galaxy {
+    width: 283px;
+  }
+
+  @include fold {
+    width: 255px;
+  }
 }
 
 #list {
@@ -232,9 +214,8 @@ body {
 }
 
 .main-small-block-left-card, .small-block-left-card {
+  @include row;
   height: 87px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -258,8 +239,7 @@ body {
 }
 
 .left-card {
-  display: flex;
-  flex-direction: row;
+  @include row;
   align-items: center;
   justify-content: space-between;
 }
@@ -302,10 +282,8 @@ body {
 }
 
 .left-card-name {
+  @include roboto;
   width: 176px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 21px;
   color: rgba(0, 0, 0, 0.94);
@@ -317,8 +295,7 @@ body {
 }
 
 .main-big-block {
-  display: flex;
-  flex-direction: column;
+  @include column;
   align-items: flex-start;
   margin: 0 0 0 100px;
 
@@ -342,8 +319,7 @@ body {
 }
 
 .main-big-block-head {
-  display: flex;
-  flex-direction: row;
+  @include row;
 
   @include landscape-up {
     width: 100%;
@@ -366,8 +342,7 @@ body {
 }
 
 .main-big-block-head-content {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-left: 16px;
 
   @include landscape-up {
@@ -380,25 +355,21 @@ body {
 }
 
 .head-content-main {
-  display: flex;
-  flex-direction: row;
+  @include row;
 
   @include landscape-up {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: space-between;
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: space-between;
   }
 }
 
 .head-content-main-title {
-  font-family: Lato;
-  font-style: normal;
+  @include title;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -433,20 +404,14 @@ body {
 
 
 .head-content-main-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center;
+  @include text;
   width: 98px;
   height: 22px;
   margin-left: 24px;
   border: none;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  display: flex;
-  align-items: center;
   text-align: center;
   cursor: pointer;
   color: #1A76C8;
@@ -470,12 +435,8 @@ body {
 }
 
 .head-content-text {
+  @include text;
   margin-top: 4px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(0, 0, 0, 0.48);
 
   @include fold {
@@ -485,29 +446,24 @@ body {
 }
 
 .main-big-block-head-additionally {
-  display: flex;
-  flex-direction: row;
+  @include row;
   margin-top: 18px;
 
   @include landscape-up {
-    display: flex;
-    flex-direction: column;
+    @include column;
     width: 100%;
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: column;
+    @include column;
     width: 100%;
   }
   
 }
 
 .block-head-additionally-text {
+  @include text;
   width: 140px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.94);
@@ -532,8 +488,7 @@ body {
 }
 
 .block-head-additionally-container {
-  display: flex;
-  flex-direction: row;
+  @include row;
   align-items: center;
   justify-content: space-between;
   width: 279px;
@@ -557,9 +512,8 @@ body {
 }
 
 .block-head-additionally-container-text {
+  @include text;
   padding-left: 21px;
-  font-family: Lato;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -591,8 +545,7 @@ body {
 }
 
 .main-big-block-active {
-  display: flex;
-  flex-direction: row;
+  @include row;
   align-items: center;
   @include phone {
     display: none;
@@ -600,24 +553,20 @@ body {
 }
 
 .main-big-block-active-container {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin: 20px 100px 0 0;
 }
 
 .main-big-block-active-container-description {
+  @include text;
   padding-bottom: 4px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
   color: #000000;
 }
 
 .main-big-block-active-container-value {
-  font-family: Lato;
-  font-style: normal;
+  @include text;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -625,6 +574,7 @@ body {
 }
 
 .main-big-block-active-btn {
+  @include text;
   width: 140px;
   margin: 20px 0 0 0;
   padding: 4px 0;
@@ -632,9 +582,6 @@ body {
   cursor: pointer;
   background: #E4F1FD;
   border-radius: 8px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
   text-align: center;
@@ -644,12 +591,12 @@ body {
 
 
 .main-big-block-basic {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-top: 50px;
 
   @include phone {
-    height: 944px;
+    height: 964px;
+    width: 464px;
   } 
 
   @include landscape-up {
@@ -672,8 +619,7 @@ body {
 }
 
 .main-big-block-basic-title {
-  font-family: Lato;
-  font-style: normal;
+  @include text;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
@@ -696,35 +642,26 @@ body {
 }
 
 .main-big-block-basic-buttons {
-  display: flex;
-  flex-direction: row;
+  @include row;
 
   @include landscape-up {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: start;
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: start;
   }
 }
 
 .block-basic-buttons-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center;
+  @include field;
   margin: 26px 0;
   padding: 13px 16px;
   width: 240px;
   height: 64px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   cursor: pointer;
   border: 1px solid #1A76C8;
   box-sizing: border-box;
@@ -771,24 +708,20 @@ body {
 }
 
 .main-big-block-basic-list {
-  display: flex;
-  flex-direction: row;
+  @include row;
   margin-bottom: 20px;
 
   @include landscape-up {
-    display: flex;
-    flex-direction: row;
+    @include row;
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: column;
+    @include column;
   }
 } 
 
 .main-big-block-basic-list-containers {
-  display: flex;
-  flex-direction: column;
+  @include column;
   width: 288px;
 
   @include galaxy {
@@ -813,12 +746,8 @@ body {
 
 
 .list-containers-text {
+  @include field;
   width: 80%;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
 
   @include landscape-up {
@@ -859,11 +788,10 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .list-text {
+  @include text;
   display: flex;
   align-items: center;
   margin: 16px 24px;
-  font-family: Lato;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -897,15 +825,12 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .list-checkbox-active {
-  display: flex;
-  flex-direction: column;
+  @include column;
 }
 
 .list-checkbox-active-desciption {
+  @include text;
   padding: 20px 20px 10px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.72);
@@ -921,6 +846,7 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .list-checkbox-active-name {
+  @include text;
   width: 550px;
   padding: 20px;
   margin-left: 20px;
@@ -928,9 +854,6 @@ input[type="checkbox"]:not(:checked) {
   background-color: #FDFDFF;
   box-sizing: border-box;
   border-radius: 100px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
@@ -956,24 +879,20 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .list-checkbox-active-container {
-  display: flex;
-  flex-direction: row;
+  @include row;
 
   @include galaxy {
-    display: flex;
-    flex-direction: column;
+    @include column;
   }
 }
 
 .list-checkbox-active-container-block {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin: 10px 20px 20px 0;
 }
 
 .list-checkbox-active-amount {
-  display: flex;
-  flex-direction: row;
+  @include row;
   justify-content: space-between;
   width: 255px;
   padding: 10px 10px 10px 20px;
@@ -995,13 +914,8 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .list-checkbox-active-amount-money {
+  @include field;
   width: 100%;
-  border: none;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
   background-color: #FDFDFF;
 }
@@ -1019,8 +933,7 @@ input[type="checkbox"]:not(:checked) {
 
 
 .main-big-block-basic-chart {
-  display: flex;
-  flex-direction: column;
+  @include column;
   width: 824px;
   margin-top: 16px;
   border: 1px solid #EBEBEB;
@@ -1053,28 +966,24 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .block-basic-chart-information {
-  display: flex;
-  flex-direction: row;
+  @include row;
   justify-content: space-between;
   width: 100%;
   padding: 24px;
   @include mobile {
-    display: flex;
-    flex-direction: row;
+    @include row;
   }
 
   @include portrait-up {
-    display: flex;
-    flex-direction: column;
+    @include column;
     align-items: center;
   }
 }
 
 
 .basic-chart-information-title {
+  @include text;
   text-align: center;
-  font-family: Lato;
-  font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
@@ -1095,33 +1004,26 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .basic-chart-information-container {
-  display: flex;
-  flex-direction: row;
-
+  @include row;
    @include landscape-up {
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: space-between;
     width: 200px
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: row;
+    @include row;
   }
 
   @include portrait-up {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include center;
+    @include row;
     width: 100%;
   }
 }
 
 .basic-chart-information-value {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin: 0 25px 0 0;
 
   @include desktop {
@@ -1148,9 +1050,7 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .basic-chart-information-value-text {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
+  @include text;
   font-size: 12px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.72);
@@ -1162,9 +1062,8 @@ input[type="checkbox"]:not(:checked) {
 }
 
 .basic-chart-information-value-accoun {
+  @include text;
   margin-top: 4px;
-  font-family: Lato;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -1249,14 +1148,12 @@ ul li ul li {
 }
 
 .basic-chart-information-date-value {
+  @include text;
+  @include center;
   width: 169px;
-  font-family: Lato;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.94)
 }
@@ -1308,27 +1205,19 @@ path {
 
 
 .footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #0C3152;
-
+  
+  @include footer;
   @include big-desktop {
     width: 100%;
   }
 }
 
 .footer-containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 4% ;
-  width: 100%;
+  @include footer-containers;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include container;
   @include mobile {
 
     width: 30%;
@@ -1336,17 +1225,9 @@ path {
 }
 
 .filling {
-  padding: 2% 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  cursor:pointer;
-  color: #FFFFFF;
+  @include filling;
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
+    @include text;
     font-size: 12px;
     line-height: 14px;
   }
@@ -1356,29 +1237,14 @@ path {
     font-size: 10px;
     line-height: 14px;
   }
-
-
 }
 
 .icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  @include icons;
 }
 
 .container-icon {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  box-sizing: content-box;
-  border: none;
-  border-radius: 50px;
-  background: #1A76C8;
+  @include container-icon;
   @include mobile {
     height: 25px;
     width: 25px;

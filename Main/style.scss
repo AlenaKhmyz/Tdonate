@@ -1,9 +1,9 @@
-@import './config/mixins';
-@import './config/variables';
+@import '../config/mixins';
+@import '../config/variables';
 
  @font-face {
     font-family: "Lato";
-    src: url("../../fonts/latoregular.woff") format("woff");
+    src: url("../../../fonts/latoregular.woff") format("woff");
   }
 
 html {
@@ -39,24 +39,14 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include body;
   width: 100vw;
-  font-family: 'Lato';
   overflow-y: scroll;
   height: 100vh;
 }
 
 .head {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 1% 8% 1% 8.5%;
-  background: #1A76C8;
+  @include head;
   @include mobile {
     padding: 3%;
   }
@@ -67,11 +57,7 @@ body {
 }
 
 .big-desktop {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include head-txt;
 
   @include big-desktop {
     align-self: center;
@@ -80,18 +66,11 @@ body {
 }
 
 .logo {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  @include logo;
 }
 
 .toPlug {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
   padding: 11px 24px;
   background: #FFFFFF;
   border: 2px solid #FFFFFF;
@@ -137,15 +116,12 @@ body {
 }
 
 .home {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  @include wrap;
   justify-content: space-between;
 }
 
 .home-container {
-  display: flex;
-  flex-wrap: wrap;
+  @include wrap;
   flex-direction: column;
   width: 39%;
 
@@ -187,9 +163,7 @@ body {
 }
 
 .home-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
   margin: 6% 0;
   padding: 10px 15px;
   background: #1A76C8;
@@ -198,8 +172,6 @@ body {
   font-weight: bold;
   font-size: 20px;
   line-height: 38px;
-  display: flex;
-  align-items: center;
   border: none;
   text-align: center;
   color: #FFFFFF;
@@ -213,7 +185,7 @@ body {
     line-height:  22px;
   }
 
-   @include desktop {
+  @include desktop {
     font-size: 20px;
     width: 45%;
   }
@@ -225,8 +197,7 @@ body {
 
 
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
+    @include text;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -269,9 +240,7 @@ body {
 }
 
 .small-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include start;
   margin-top: 4%;
 }
 
@@ -301,21 +270,18 @@ body {
 }
 
 .medium-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include start;
   margin: 8% 0;
   @include mobile {
-    width: 100%;
-    justify-content: space-between;
+    @include between;
   }
+
   @include phone {
-    width: 100%;
-    justify-content: space-between;
+    @include between;
   }
-   @include desktop {
-    width: 100%;
-    justify-content: space-between;
+
+  @include desktop {
+    @include between;
   }
 }
 
@@ -326,9 +292,8 @@ body {
   line-height: 53px;
   color: rgba(0, 0, 0, 0.94);
   @include mobile {
+    @include text;
     margin: 9% 0 3%;
-    font-family: Lato;
-    font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -336,11 +301,9 @@ body {
 }
 
 .medium-block-dates {
-  display: flex;
-  flex-direction: row;
+  @include wrap;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 70%;
   @include mobile {
     width: 100%;
@@ -356,23 +319,20 @@ body {
   }
 
   @include landscape-up {
-     width: 100%;
+    width: 100%;
   }
 
   @include galaxy {
-    display: flex;
+    @include center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 90%;
   }
   
 }
 
 .date {
-  display: flex;
+  @include column;
   text-align: center;
-  flex-direction: column;
   width: 20%;
   margin: 10% 0;
 
@@ -404,11 +364,9 @@ body {
   font-weight: 600;
   font-size: 44px;
   line-height: 53px;
-  text-align: center;
   color: rgba(0, 0, 0, 0.94);
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
+    @include text;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -421,11 +379,9 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
-  text-align: center;
   color: rgba(0, 0, 0, 0.72);
    @include mobile {
-      font-family: Lato;
-      font-style: normal;
+      @include text;
       font-weight: 500;
       font-size: 12px;
       line-height: 14px;
@@ -434,16 +390,12 @@ body {
 }
 
 .big-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
+  @include start;
 }
 
 .big-block-groups {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  @include start;
+  @include row;
   width: 100%;
   margin: 4% 0;
   @include mobile {
@@ -466,15 +418,13 @@ body {
 }
 
 .group {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-right: 2%;
 }
 
 
 .card {
-  display: flex;
-  flex-direction: row;
+  @include row;
   height: 5rem;
   margin: 5% 0;
   border: 1px solid rgba(0, 0, 0, 0.16);
@@ -506,8 +456,7 @@ body {
   align-items: center;
   color: #000000;
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
+    @include text;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -530,8 +479,7 @@ body {
   line-height: 53px;
   color: rgba(0, 0, 0, 0.94);
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
+    @include text;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -540,27 +488,19 @@ body {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #0C3152;
-
+  
+  @include footer;
   @include big-desktop {
     width: 100%;
   }
 }
 
 .footer-containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 4% ;
-  width: 100%;
+  @include footer-containers;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include container;
   @include mobile {
 
     width: 30%;
@@ -568,42 +508,26 @@ body {
 }
 
 .filling {
-  padding: 2% 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  cursor:pointer;
-  color: #FFFFFF;
+  @include filling;
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
+    @include text;
     font-size: 12px;
     line-height: 14px;
   }
 
+  @include fold {
+    padding: 5% 0;
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
 
 .icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  @include icons;
 }
 
 .container-icon {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  box-sizing: content-box;
-  border: none;
-  border-radius: 50px;
-  background: #1A76C8;
+  @include container-icon;
   @include mobile {
     height: 25px;
     width: 25px;
@@ -616,6 +540,4 @@ body {
     width: 13px;
     height: 12px;
   }
-
-
 }

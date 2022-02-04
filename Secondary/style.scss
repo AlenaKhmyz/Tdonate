@@ -1,14 +1,14 @@
-@import './config/mixins';
-@import './config/variables';
+@import '../config/mixins';
+@import '../config/variables';
 
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/latoregular.woff") format("woff");
+  src: url("../../../fonts/latoregular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Helvetica";
-  src: url("../../fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  src: url("../../../fonts/HelveticaNeueCyr-Roman.woff") format("woff");
 }
 
 * {
@@ -23,21 +23,11 @@ html {
 
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: Lato Helvetica;
+  @include body;
 }
 
 .head {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 1% 7.8% 1% 8.5%;
-  background: #1A76C8;
+  @include head;
 
   @include mobile {
     padding: 3%;
@@ -49,11 +39,7 @@ body {
 }
 
 .big-desktop {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include head-txt;
 
   @include big-desktop {
     align-self: center;
@@ -62,12 +48,7 @@ body {
 }
 
 .logo {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  @include logo;
 
   @include fold {
     font-size: 20px;
@@ -76,11 +57,9 @@ body {
 }
 
 .head-text {
+  @include roboto;
   margin-right: 700px;
   text-align: center;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 28px;
   color: #FFFFFF;
@@ -94,12 +73,7 @@ body {
 }
 
 .withdraw {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
+  @include withdraw;
   @include fold {
     font-size: 14px;
     line-height: 19px;
@@ -110,7 +84,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 80px 330px 120px 330px;
+  padding: 83px 330px 140px 330px;
 
   @include big-desktop {
     align-self: center;
@@ -127,43 +101,38 @@ body {
   }
 
   @include phone {
-    padding: 3% 5%;
+    padding: 10% 5% 16% 5%;
+  }
+
+  @include landscape-up {
+    padding: 18% 13% 12% 13%;
   }
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include start;
   justify-content: center;
   width: 100%;
 
 
   @include big-desktop {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include start;
     justify-content: center;
   }
 
   @include desktop {
-    display: flex;
-    flex-direction: column;
+    @include column;
     justify-content: center;
   }
 
   @include landscape-up {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include start;
     justify-content: center;
 
   }
 
   @include phone {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include start;
     justify-content: center;
     width: 100%;
   }
@@ -172,8 +141,7 @@ body {
 }
 
 .main-descriotion {
-  display: flex;
-  flex-direction: column;
+  @include column;
 
   @include phone {
     margin-top: 30px;
@@ -181,8 +149,7 @@ body {
 }
 
 .description-title {
-  font-family: Lato;
-  font-style: normal;
+  @include text;
   font-weight: 600;
   font-size: 44px;
   line-height: 53px;
@@ -197,24 +164,23 @@ body {
 }
 
 .description-text {
+  @include text;
   margin-top: 24px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.72);
 }
 
 .card-active {
-  display: flex;
-  flex-direction: column;
+  @include column;
+  @include landscape-up {
+    margin-top: 31px;
+  }
 }
 
 .active-description {
+  @include text;
   margin-top: 22px;
-  font-family: Lato;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -222,11 +188,10 @@ body {
 }
 
 .active-amount {
+  @include text;
   width: 109px;
   margin-top: 16px;
   padding-bottom: 4px;
-  font-family: Lato;
-  font-style: normal;
   font-weight: 600;
   font-size: 32px;
   line-height: 38px;
@@ -235,8 +200,7 @@ body {
 }
 
 .main-img {
-  display: flex;
-  flex-direction: row;
+  @include row;
   margin-top: 30px;
 
   @include phone {
@@ -278,15 +242,13 @@ body {
   display: none;
 
   @include phone {
-    display: flex;
-    flex-direction: column;
+    @include column;
     margin-top: 60px;
   }
 
   @include landscape-up {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
+    @include column;
+    margin-top: 90px;
   }
 }
 
@@ -328,8 +290,7 @@ body {
 
 
 .main-card {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-top: 46px;
 
   @include phone {
@@ -353,11 +314,15 @@ body {
   box-sizing: border-box;
 
   @include portrait-up {
-    width: 360px;
+    width: 332px;
+  }
+
+  @include galaxy-up {
+    width: 290px;
   }
 
   @include galaxy {
-    width: 336px;
+    width: 320px;
   }
 
   @include fold {
@@ -366,8 +331,7 @@ body {
 }
 
 .main-card-form {
-  display: flex;
-  flex-direction: row;
+  @include row;
   margin-top: 8px;
   
   @include phone {
@@ -376,12 +340,12 @@ body {
 }
 
 .main-card-form-data {
-  display: flex;
-  flex-direction: row;
+  @include row;
   margin-right: 5px;
 }
 
 .card-form-data {
+  @include text;
   width: 55px;
   margin-right: 8px;
   padding: 9px;
@@ -389,9 +353,6 @@ body {
   background: #F9F9F9;
   border: 2px solid #C0C0BF;
   box-sizing: border-box;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.54);
@@ -406,12 +367,16 @@ body {
 
   @include portrait-up {
     display: block;
-    width: 227px;
+    width: 198px;
     height: 38px;
   }
 
+  @include galaxy-up {
+    width: 175px;
+  }
+
   @include galaxy {
-    width: 212px;
+    width: 200px;
   }
 
   @include fold {
@@ -420,12 +385,10 @@ body {
 }
 
 .card-form-slash {
+  @include text;
   width: 5.5px;
   height: 14px;
   margin-right: 8px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 20px;
   line-height: 41px;
   color: #C0C0BF;
@@ -437,17 +400,14 @@ body {
 }
 
 .main-card-form-cvc {
-  display: flex;
-  flex-direction: row;
+  @include text;
+  @include row;
   width: 90px;
   margin-right: 8px;
   padding: 9px;
   background: #F9F9F9;
   border: 2px solid #C0C0BF;
   box-sizing: border-box;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.54);
@@ -456,6 +416,10 @@ body {
     margin: 0;
     width: 120px;
     height: 38px;
+  }
+
+  @include galaxy-up {
+    width: 100px;
   }
 
   @include galaxy {
@@ -475,14 +439,12 @@ body {
   background: #F9F9F9;
 }
 
-.main-phone {
-  display: flex;
-  flex-direction: column;
+.main-phone, .main-qiwi{
+  @include column;
   margin-top: 46px;
 
   @include phone {
-    display: flex;
-    flex-direction: column;
+    @include column;
     margin-top: 80px;
   }
 
@@ -492,36 +454,36 @@ body {
 }
 
 .main-phone-title {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
+  @include text;
   font-size: 12px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.72);
 }
 
 .main-phone-field {
+  @include text;
   width: 580px;
   margin-top: 8px;
   padding: 14px 16px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 100px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: rgba(0, 0, 0, 0.48);
 
   @include portrait-up {
-    width: 360px;
+    width: 332px;
+  }
+
+  @include galaxy-up {
+    width: 290px;
   }
 
   @include galaxy {
-    width: 336px;
+    width: 320px;
   } 
-
+  
   @include fold {
     padding: 14px 13px;
     width: 250px;
@@ -529,35 +491,29 @@ body {
 }
 
 .main-payment {
-  display: flex;
-  flex-direction: column;
+  @include column;
 }
 
 .main-payment-text {
+  @include text;
   margin-top: 16px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.48);
 }
 
 .main-payment-block {
-  display: flex;
-  flex-direction: row;
+  @include row;
   margin-top: 48px;
 
   @include phone {
-    display: flex;
-    flex-direction: column;
+    @include column;
     margin: 70px 0 130px 0;
   }
 
   @include landscape-up { 
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 130px;
+    @include column;
+    margin: 90px 0 130px 0;
   }  
 
   @include portrait-up {
@@ -583,6 +539,14 @@ body {
 
   @include phone {
     width: 360px;
+  }
+
+  @include portrait-up {
+    width: 332px;
+  }
+
+  @include galaxy-up {
+    width: 290px;
   }
 
   @include galaxy {
@@ -630,9 +594,7 @@ input {
 }
 
 .main-table {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include start;
   margin-top: 55px;
   width: 780px;
   border: 1px solid #BDBDBD;
@@ -645,14 +607,12 @@ input {
 }
 
 .table-row  {
-  display: flex;
-  flex-direction: row;
+  @include row;
   width: 100%;
 }
 
 .table-row-column-head {
-  font-family: Lato;
-  font-style: normal;
+  @include text;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
@@ -660,9 +620,7 @@ input {
 }
 
 .table-row-column {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
+  @include text;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
@@ -671,8 +629,7 @@ input {
 
 
 .status {  
-  font-family: Lato;
-  font-style: normal;
+  @include text;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
@@ -680,8 +637,7 @@ input {
 }
 
 .status-refusal {
-  font-family: Lato;
-  font-style: normal;
+  @include text;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
@@ -748,33 +704,20 @@ input {
   padding: 14px 81px 0px 83px;
 }
 
-// .fourth {
-//   margin-left: 186px;
-//   padding: 15px 24px 14px 0px;
-// }
-
 .footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #0C3152;
-
+  
+  @include footer;
   @include big-desktop {
     width: 100%;
   }
 }
 
 .footer-containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 4% ;
-  width: 100%;
+  @include footer-containers;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include container;
   @include mobile {
 
     width: 30%;
@@ -782,17 +725,9 @@ input {
 }
 
 .filling {
-  padding: 2% 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  cursor:pointer;
-  color: #FFFFFF;
+  @include filling;
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
+    @include text;
     font-size: 12px;
     line-height: 14px;
   }
@@ -802,29 +737,14 @@ input {
     font-size: 10px;
     line-height: 14px;
   }
-
-
 }
 
 .icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  @include icons;
 }
 
 .container-icon {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  box-sizing: content-box;
-  border: none;
-  border-radius: 50px;
-  background: #1A76C8;
+  @include container-icon;
   @include mobile {
     height: 25px;
     width: 25px;

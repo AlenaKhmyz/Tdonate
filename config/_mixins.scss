@@ -1,0 +1,223 @@
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  } 
+} 
+
+@mixin phone {
+  @media (max-width: $phone) {
+    @content;
+  } 
+  
+} 
+
+@mixin portrait-up {
+  @media (max-width: $portrait-up) {
+    @content;
+  } 
+} 
+
+@mixin galaxy {
+  @media (max-width: $galaxy) {
+    @content;
+  } 
+} 
+
+@mixin galaxy-up {
+  @media (max-width: $galaxy-up) {
+    @content;
+  } 
+} 
+
+@mixin fold {
+  @media (max-width: $fold) {
+    @content;
+  } 
+} 
+
+@mixin landscape-up {
+  @media (max-width: $landscape) {
+    @content;
+  } 
+} 
+
+@mixin landscape {
+  @media (min-width: $landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  } 
+} 
+
+@mixin big-desktop {
+  @media (min-width: $big-desktop) {
+    @content;
+  } 
+} 
+
+@mixin big {
+  @media (min-width: $big) {
+    @content;
+  } 
+} 
+
+@mixin head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 1% 7.8% 1% 8.5%;
+  background: #1A76C8;
+}
+
+@mixin head-txt {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin logo {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+@mixin withdraw {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+@mixin footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #0C3152;
+}
+
+@mixin footer-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4% ;
+  width: 100%;
+}
+
+@mixin container {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin filling {
+  padding: 2% 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  cursor:pointer;
+  color: #FFFFFF;
+}
+
+@mixin icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@mixin container-icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  box-sizing: content-box;
+  border: none;
+  border-radius: 50px;
+  background: #1A76C8;
+}
+
+@mixin body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lato';
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+@mixin start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin between {
+  width: 100%;
+  justify-content: space-between;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin field {
+  border: none;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin title {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 39px;
+}
+
+@mixin text {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin roboto {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}

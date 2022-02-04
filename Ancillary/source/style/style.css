@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/latoregular.woff") format("woff");
+  src: url("../../../fonts/latoregular.woff") format("woff");
 }
 
 * {
@@ -147,7 +147,7 @@ body {
 
 @media (max-width: 1300px) {
   .wrap {
-    padding: 5% 22% 9.8% 22%;
+    padding: 9% 22% 9.8% 22%;
   }
 }
 
@@ -157,7 +157,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .wrap {
     padding: 14.2% 5% 21% 7%;
   }
@@ -479,7 +479,7 @@ input:focus {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .form-fields-amount {
     width: 100%;
   }
@@ -559,7 +559,7 @@ input:focus {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main-button {
     margin-top: 50px;
     margin-bottom: 0px;

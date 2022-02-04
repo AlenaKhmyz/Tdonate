@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/latoregular.woff") format("woff");
+  src: url("../../../fonts/latoregular.woff") format("woff");
 }
 
 * {
@@ -126,7 +126,7 @@ body {
 
 .wrap {
   width: 100%;
-  padding: 80px 330px 160px 330px;
+  padding: 134px 330px 203px 330px;
 }
 
 @media (min-width: 1720px) {
@@ -153,7 +153,7 @@ body {
 
 @media (max-width: 1030px) {
   .wrap {
-    padding: 22% 10% 35% 10%;
+    padding: 27% 10% 38% 10%;
   }
 }
 
@@ -163,9 +163,9 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .wrap {
-    padding: 21.2% 5% 35% 7%;
+    padding: 26% 5% 49% 7%;
   }
 }
 
@@ -179,16 +179,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 54px 100px;
   border: 2px solid #E0E0E0;
   -webkit-box-sizing: border-box;
@@ -207,16 +208,17 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     padding: 54px 60px;
   }
 }
@@ -243,21 +245,22 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .main {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     border: none;
     padding: 3% 0 4.5% 0;
   }
@@ -268,22 +271,23 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     padding: 54px 100px;
     border: none;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main {
     padding: 0;
   }
@@ -296,7 +300,7 @@ body {
 }
 
 .main-title {
-  font-family: Lato;
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
   font-size: 39px;
@@ -307,7 +311,7 @@ body {
 
 @media (min-width: 1720px) {
   .main-title {
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
     font-size: 39px;
@@ -318,7 +322,7 @@ body {
 
 @media (max-width: 1030px) {
   .main-title {
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
     font-size: 39px;
@@ -327,22 +331,24 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .main-title {
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
+    font-size: 39px;
     font-size: 35px;
     line-height: 45px;
     color: rgba(0, 0, 0, 0.94);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main-title {
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
+    font-size: 39px;
     font-size: 24px;
     line-height: 29px;
   }
@@ -350,9 +356,10 @@ body {
 
 @media (max-width: 360px) {
   .main-title {
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
+    font-size: 39px;
     font-size: 24px;
     line-height: 29px;
   }
@@ -360,9 +367,10 @@ body {
 
 @media (max-width: 290px) {
   .main-title {
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
+    font-size: 39px;
     font-size: 17px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.94);
@@ -380,32 +388,33 @@ li {
 li:before {
   counter-increment: myCounter;
   content: counter(myCounter);
-  color: white;
-  background: #2980B9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 39px;
+  color: white;
+  background: #2980B9;
+  text-align: center;
   margin: 0px 32px 0px 0px;
   line-height: 40px;
   width: 50px;
   height: 50px;
   border-radius: 30px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   color: #FFFFFF;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   li:before {
     margin: 0px;
   }
@@ -443,7 +452,6 @@ li:before {
 
 @media (max-width: 1030px) {
   .main-list {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -451,6 +459,7 @@ li:before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -459,7 +468,6 @@ li:before {
 
 @media (max-width: 769px) {
   .main-list {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -467,6 +475,7 @@ li:before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -477,9 +486,10 @@ li:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: row;
-      -ms-flex-pack: row;
-          justify-content: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -487,13 +497,13 @@ li:before {
 }
 
 .main-list-element-text {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: start;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
@@ -501,34 +511,34 @@ li:before {
 
 @media (max-width: 1030px) {
   .main-list-element-text {
-    width: 440px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 440px;
     font-size: 25px;
     line-height: 30px;
     color: #000000;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .main-list-element-text {
-    width: 376px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 376px;
     font-size: 30px;
     line-height: 40px;
     color: #000000;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main-list-element-text {
-    width: 247px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 247px;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -538,10 +548,10 @@ li:before {
 
 @media (max-width: 360px) {
   .main-list-element-text {
-    width: 247px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 247px;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -551,10 +561,10 @@ li:before {
 
 @media (max-width: 290px) {
   .main-list-element-text {
-    width: 207px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 207px;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -566,7 +576,7 @@ li:before {
   padding: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .trasposition-text {
     width: 211px;
   }
@@ -580,10 +590,10 @@ li:before {
 
 @media (max-width: 290px) {
   .trasposition-text {
-    width: 100%;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 100%;
     font-size: 14px;
     line-height: 19px;
     color: #000000;
@@ -592,15 +602,15 @@ li:before {
 }
 
 .strong {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
   width: 100%;
   display: inline-block;
   text-align: start;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
@@ -608,34 +618,34 @@ li:before {
 
 @media (max-width: 1030px) {
   .strong {
-    width: 440px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 440px;
     font-size: 25px;
     line-height: 30px;
     color: #000000;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .strong {
-    width: 376px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 376px;
     font-size: 30px;
     line-height: 40px;
     color: #000000;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .strong {
-    width: 247px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 247px;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -645,12 +655,13 @@ li:before {
 
 @media (max-width: 360px) {
   .strong {
-    width: 247px;
-    font-family: Lato;
+    border: none;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
+    width: 247px;
     color: #000000;
     padding-left: 30px;
   }
@@ -658,10 +669,10 @@ li:before {
 
 @media (max-width: 290px) {
   .strong {
-    width: 207px;
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
+    width: 207px;
     font-size: 14px;
     line-height: 19px;
     color: #000000;
@@ -683,7 +694,7 @@ li:before {
           flex-direction: column;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .trasposition {
     padding-left: 30px;
   }
@@ -721,7 +732,7 @@ li:before {
   border-radius: 100px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .main-list-element-container {
     width: 241px;
     margin: 11px 0;
@@ -735,7 +746,7 @@ li:before {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .main-list-element-container {
     width: 207px;
   }
@@ -754,16 +765,17 @@ li:before {
 }
 
 .main-list-element-container-text {
-  padding: 13px 0 13px 21px;
-  font-family: Lato;
+  font-family: 'Lato';
   font-style: normal;
+  font-weight: normal;
+  padding: 13px 0 13px 21px;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.94);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .main-list-element-container-text {
     padding: 19px 21px;
     font-size: 16px;
@@ -792,25 +804,6 @@ li:before {
   border: none;
   cursor: pointer;
   background-color: #fff;
-}
-
-.main-big-block-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (max-width: 1030px) {
-  .main-big-block-active {
-    display: none;
-  }
 }
 
 .footer {
@@ -873,7 +866,7 @@ li:before {
 
 @media (max-width: 769px) {
   .filling {
-    font-family: Lato;
+    font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;

@@ -1,9 +1,9 @@
-@import './config/mixins';
-@import './config/variables';
+@import '../config/mixins';
+@import '../config/variables';
 
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/latoregular.woff") format("woff");
+  src: url("../../../fonts/latoregular.woff") format("woff");
 }
 
 * {
@@ -18,21 +18,11 @@ html {
 
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Lato';
+  @include body
 }
 
 .head {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding: 1% 7.8% 1% 8.5%;
-  background: #1A76C8;
+  @include head;
 
   @include phone {
     padding: 3% 7.8% 3% 8.5%;
@@ -48,11 +38,7 @@ body {
 }
 
 .big-desktop {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include head-txt;
 
   @include big-desktop {
     align-self: center;
@@ -61,12 +47,7 @@ body {
 }
 
 .logo {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  @include logo;
 
   @include fold {
     font-size: 20px;
@@ -75,12 +56,7 @@ body {
 }
 
 .withdraw {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
+  @include withdraw;
   @include fold {
     font-size: 14px;
     line-height: 19px;
@@ -93,8 +69,6 @@ body {
   width: 100%;
   padding: 80px 430px 120px 430px;
 
-  
-
   @include big-desktop {
     align-self: center;
     width: 1600px;
@@ -106,7 +80,7 @@ body {
   }
 
   @include desktop {
-    padding: 5% 22% 9.8% 22%;
+    padding: 9% 22% 9.8% 22%;
   }
 
 
@@ -125,39 +99,30 @@ body {
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include center;
+  @include column;
   width: 100%;
 
 
   @include big-desktop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center;
+    @include column;
   }
 
   @include desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include ccenter;
+    @include column;
   }
 
   @include landscape-up {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center;
+    @include column;
 
   }
 
   @include mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center;
+    @include column;
     width: 100%;
   }
 
@@ -181,14 +146,12 @@ body {
 }
 
 .main-form {
-  display: flex;
-  flex-direction: column;
+  @include column;
   width: 100%;
 }
 
 .form-fields {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-bottom: 24px;
 
    ::-webkit-scrollbar {
@@ -219,26 +182,20 @@ body {
 
 
 .form-fields-name {
+  @include  text;
   margin-bottom: 8px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.72);
 }
 
 .form-fields-enter {
+  @include field;
   width: 100%;
   padding: 14px 16px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 100px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
 
   @include mobile {
@@ -267,13 +224,11 @@ input:focus {
 }
 
 .form-little {
-  display: flex;
-  flex-direction: row;
+  @include row;
   width: 100%;
 
   @include mobile {
-    display: flex;
-    flex-direction: column;
+    @include column;
   }
 }
 
@@ -292,8 +247,7 @@ input:focus {
 }
 
 .form-fields-little {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-bottom: 24px;
   width: 100%;
   margin-left: 20px;
@@ -304,10 +258,8 @@ input:focus {
 }
 
 .form-fields-amount {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  @include row;
+  @include between;
   padding: 10px 10px 10px 20px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
@@ -330,13 +282,8 @@ input:focus {
 }
 
 .form-fields-amount-money {
+  @include field;
   width: 100%;
-  border: none;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
   background-color: #FDFDFF;
 }
@@ -353,15 +300,11 @@ input:focus {
 }
 
 .form-fields-text {
+  @include field;
   padding: 16px 16px 2px;
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   border-radius: 24px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   color: rgba(0, 0, 0, 0.94);
 
   @include galaxy {
@@ -370,10 +313,8 @@ input:focus {
 }
 
 .form-fields-elements {
+  @include text;
   margin-top: 8px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.48);
@@ -400,15 +341,11 @@ input:focus {
 }
 
 .btn {
+  @include field;
   padding: 16px 24px;
   border: 1px solid #FF4034;
   box-sizing: border-box;
   border-radius: 100px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
   transition: 0.5s;
   cursor: pointer;
   color: #FF4034;
@@ -428,27 +365,19 @@ input:focus {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #0C3152;
-
+  
+  @include footer;
   @include big-desktop {
     width: 100%;
   }
 }
 
 .footer-containers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 4% ;
-  width: 100%;
+  @include footer-containers;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include container;
   @include mobile {
 
     width: 30%;
@@ -456,17 +385,9 @@ input:focus {
 }
 
 .filling {
-  padding: 2% 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
-  cursor:pointer;
-  color: #FFFFFF;
+  @include filling;
   @include mobile {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
+    @include text;
     font-size: 12px;
     line-height: 14px;
   }
@@ -476,29 +397,14 @@ input:focus {
     font-size: 10px;
     line-height: 14px;
   }
-
-
 }
 
 .icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  @include icons;
 }
 
 .container-icon {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
-  box-sizing: content-box;
-  border: none;
-  border-radius: 50px;
-  background: #1A76C8;
+  @include container-icon;
   @include mobile {
     height: 25px;
     width: 25px;

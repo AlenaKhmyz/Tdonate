@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="./source/style/style.css">
 
   
@@ -32,22 +33,22 @@
      <div class="active-amount">20.10 ₽ </div>
    </div>
    <div class="main-img">
-      <div class="img-card">
+      <div class="img-card active-card">
         <img src='./img/cards/card.png' class="card">
       </div>
-      <div class="img-card">
+      <div class="img-card active-qiwi">
         <img src='./img/cards/qiwi.png' class="card">
       </div>
-      <div class="img-card">
+      <div class="img-card active-phone">
         <img src='./img/cards/phone.png' class="card">
       </div>
    </div>
    <div class="checkbox-datas">
-    <p class="check"><input name="card" type="radio" value="nocard" class="checkbox"> <img src='./img/cards/mobile.png' class="img-icon">Телефон</p>
-    <p class="check"><input name="card" type="radio" value="nocard" class="checkbox"><img src='./img/cards/qiwi-icon.png' class="img-icon">QIWI Wallet</p>
-    <p class="check"><input name="card" type="radio" value="nocard" class="checkbox" checked><img src='./img/cards/card-icon.png' class="img-icon-card">Банковской картой</p>
+    <p class="check active-phone"><input name="card" type="radio" value="nocard" class="checkbox"> <img src='./img/cards/mobile.png' class="img-icon">Телефон</p>
+    <p class="check active-qiwi"><input name="card" type="radio" value="nocard" class="checkbox"><img src='./img/cards/qiwi-icon.png' class="img-icon">QIWI Wallet</p>
+    <p class="check active-card"><input name="card" type="radio" value="nocard" class="checkbox"><img src='./img/cards/card-icon.png' class="img-icon-card">Банковской картой</p>
    </div>
-   <div class="main-card">
+   <div class="main-card" style="display: none;">
      <input class="main-card-field" placeholder="Номер карты">
      <div class="main-card-form">
        <div class="main-card-form-data">
@@ -62,10 +63,15 @@
        </div>
      </div>
    </div>
-   <div class="main-phone">
+   <div class="main-phone" style="display: none;">
      <p class="main-phone-title">Ваш номер телефона</p>
      <input class="main-phone-field" placeholder="Введите ваш номер телефона">
    </div>
+    <div class="main-qiwi" style="display: none;">
+      <p class="main-phone-title">Ваш номер телефона</p>
+      <input class="main-phone-field" placeholder="Введите ваш номер телефона">
+    </div>
+   
    <div class="main-payment">
       <p class="main-payment-text">
         Комиссия: 2%<br>
@@ -154,10 +160,29 @@
     </div>
   </div>
 
-   <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
-    $('textarea').autoResize();
-  </script> -->
+    
+   $('.active-card').click(function () {
+      $(".main-card").slideToggle(200)
+      $(".main-phone").css("display", "none");
+      $(".main-qiwi").css("display", "none");
+
+    })
+
+    $('.active-phone').click(function () {
+        $(".main-phone").slideToggle(200)
+        $(".main-card").css("display", "none");
+        $(".main-qiwi").css("display", "none");
+      })
+
+      $('.active-qiwi').click(function () {
+          $(".main-qiwi").slideToggle(200)
+          $(".main-card").css("display", "none");
+           $(".main-phone").css("display", "none");
+        })
+
+  </script>
 
 </body>
 

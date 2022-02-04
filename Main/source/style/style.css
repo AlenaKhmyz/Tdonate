@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/latoregular.woff") format("woff");
+  src: url("../../../fonts/latoregular.woff") format("woff");
 }
 
 html {
@@ -46,8 +46,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
   font-family: 'Lato';
+  width: 100vw;
   overflow-y: scroll;
   height: 100vh;
 }
@@ -68,7 +68,7 @@ body {
           align-items: center;
   text-align: center;
   width: 100%;
-  padding: 1% 8% 1% 8.5%;
+  padding: 1% 7.8% 1% 8.5%;
   background: #1A76C8;
 }
 
@@ -78,7 +78,7 @@ body {
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1720px) {
   .head {
     width: 100%;
   }
@@ -101,7 +101,7 @@ body {
           align-items: center;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1720px) {
   .big-desktop {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -148,7 +148,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .toPlug {
     padding: 11px 24px;
     width: 40%;
@@ -168,7 +168,7 @@ body {
   padding: 3% 2% 3% 8.2%;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1720px) {
   .wrap {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -205,10 +205,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  flex-direction: column;
   width: 39%;
 }
 
@@ -277,8 +278,6 @@ body {
   font-weight: bold;
   font-size: 20px;
   line-height: 38px;
-  display: flex;
-  align-items: center;
   border: none;
   text-align: center;
   color: #FFFFFF;
@@ -286,7 +285,7 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1720px) {
   .home-btn {
     width: 42%;
     padding: 13px 0;
@@ -313,6 +312,7 @@ body {
   .home-btn {
     font-family: Lato;
     font-style: normal;
+    font-weight: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -334,7 +334,7 @@ body {
   background-size: 100%;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1720px) {
   .home-img {
     width: 55%;
   }
@@ -346,7 +346,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .home-img {
     width: 55%;
   }
@@ -459,9 +459,10 @@ body {
 
 @media (max-width: 769px) {
   .medium-block-title {
-    margin: 9% 0 3%;
     font-family: Lato;
     font-style: normal;
+    font-weight: normal;
+    margin: 9% 0 3%;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -472,6 +473,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -482,8 +485,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 70%;
 }
 
@@ -505,7 +506,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .medium-block-dates {
     width: 100%;
   }
@@ -516,16 +517,16 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 90%;
   }
 }
@@ -534,11 +535,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
   width: 20%;
   margin: 10% 0;
 }
@@ -561,7 +562,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .date {
     width: 30%;
   }
@@ -579,7 +580,6 @@ body {
   font-weight: 600;
   font-size: 44px;
   line-height: 53px;
-  text-align: center;
   color: rgba(0, 0, 0, 0.94);
 }
 
@@ -587,6 +587,7 @@ body {
   .block-value {
     font-family: Lato;
     font-style: normal;
+    font-weight: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -599,7 +600,6 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
-  text-align: center;
   color: rgba(0, 0, 0, 0.72);
 }
 
@@ -607,6 +607,7 @@ body {
   .block-description {
     font-family: Lato;
     font-style: normal;
+    font-weight: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
@@ -631,13 +632,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
   width: 100%;
   margin: 4% 0;
 }
@@ -658,7 +662,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .big-block-groups {
     width: 100%;
     overflow-x: scroll;
@@ -705,7 +709,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .card {
     width: 250px;
     margin: 5% 0%;
@@ -732,6 +736,7 @@ body {
   .card-name {
     font-family: Lato;
     font-style: normal;
+    font-weight: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -763,6 +768,7 @@ body {
   .big-block-title {
     font-family: Lato;
     font-style: normal;
+    font-weight: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -780,7 +786,7 @@ body {
   background: #0C3152;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1720px) {
   .footer {
     width: 100%;
   }
@@ -833,6 +839,14 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 290px) {
+  .filling {
+    padding: 5% 0;
+    font-size: 10px;
     line-height: 14px;
   }
 }
